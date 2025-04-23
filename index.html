@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio profissional de José Roberto, especialista em Segurança da Informação, Governança de TI, Gestão de Riscos e Conformidade Regulatória.">
+  <meta name="keywords" content="José Roberto, segurança da informação, governança de TI, gestão de riscos, LGPD, ISO 27001, consultoria">
+  <title>José Roberto | Fluy</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Montserrat:wght@600&family=Roboto:wght@400;700&display=Roboto" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Chart.js Annotation Plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.0.1"></script>
+  <style>
+    /* === Estilo Geral === */
+    body {
+      background-image: url('imagens/background_Main.jpeg'); /* Comprimir imagem para melhor desempenho */
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    /* === Barra de Navegação === */
+    nav {
+      background: rgba(0, 0, 0, 0.9);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      padding: 10px 0;
+    }
+
+    nav .nav-link {
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav .nav-link:hover {
+      color: #ffd700;
+    }
+
+    nav .nav-link::before {
+      content: '•';
+      color: transparent;
+      position: absolute;
+      left: -15px;
+      transition: color 0.3s ease;
+    }
+
+    nav .nav-link:hover::before {
+      color: #ffd700;
+    }
+
+    /* === Logo === */
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 50px;
+      z-index: 1100;
+    }
+
+    /* === Cabeçalho === */
+    header {
+      text-align: center;
+      padding: 100px 0 50px;
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    header h1 {
+      color: #1C2526;
+      font-size: 6rem;
+      font-family: 'Alegreya', serif;
+      font-weight: 700;
+      -webkit-text-stroke: 1px #8C7853;
+      text-shadow: 1px 1px 0 #8C7853, -1px -1px 0 #8C7853, 1px -1px 0 #8C7853, -1px 1px 0 #8C7853;
+    }
+
+    header h1 .initial {
+      font-size: 9rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* === Títulos das Seções === */
+    h2 {
+      color: #ffd700;
+      text-shadow: 1px 1px #000000;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+
+    /* === Seção Sobre === */
+    #sobre {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 60px 0;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    #sobre p {
+      font-size: 1.2rem;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    #sobre .btn-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    #sobre .btn-warning {
+      background-color: #ffd700;
+      border: none;
+      color: #000000;
+      margin: 10px;
+      transition: transform 0.3s ease;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+    }
+
+    #sobre .btn-warning:hover {
+      transform: scale(1.1);
+      background-color: #ffea00;
+    }
+
+    /* === Seção Serviços === */
+    #servicos {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 60px 0;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    #servicos ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.2rem;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    #servicos ul li {
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #servicos ul li:hover {
+      transform: translateX(10px);
+      box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5);
+    }
+
+    /* === Seção Projetos === */
+    #projeto {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 60px 0;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    .repo-card {
+      background: rgba(0, 0, 0, 0.95);
+      color: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      text-align: center;
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .repo-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .repo-card img {
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .repo-card h5 {
+      color: #1C2526;
+      transition: color 0.3s ease;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+
+    .repo-card h5:hover {
+      color: #ffd700;
+    }
+
+    .repo-card p {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* === Seção Competências (Gráfico) === */
+    .chart-section {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 60px 0;
+      margin: 20px 0;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .chart-section:hover {
+      transform: translateY(-10px);
+    }
+
+    .chart-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #graficoPerfil {
+      height: 481px !important;
+      width: 100%;
+    }
+
+    /* === Card de Contato === */
+    .contact-card {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.95);
+      padding: 15px;
+      border-radius: 8px;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1100;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-card h3 {
+      color: #ffd700;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
+
+    .contact-card a {
+      color: #ffd700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-card a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .contact-card img {
+      width: 30%;
+      max-width: 30px;
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+
+    /* === Footer === */
+    footer {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 20px 0;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    footer:hover {
+      background: #2a2a2a;
+    }
+
+    /* === Responsividade === */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 4rem;
+      }
+
+      header h1 .initial {
+        font-size: 6rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      #sobre p, #servicos ul, .repo-card p, footer {
+        font-size: 1rem;
+      }
+
+      .contact-card {
+        position: static;
+        margin: 20px auto;
+        max-width: 90%;
+        padding: 10px;
+      }
+
+      .contact-card h3 {
+        font-size: 1.2rem;
+      }
+
+      .contact-card p {
+        font-size: 0.8rem;
+      }
+
+      .chart-container {
+        max-width: 100%;
+        padding: 10px;
+      }
+
+      #graficoPerfil {
+        height: 325px !important;
+      }
+
+      .repo-card img {
+        max-height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo -->
+  <img src="Imagens/logo_JR.png" alt="Logotipo de José Roberto" class="logo" loading="lazy">
+
+  <!-- Barra de Navegação -->
+  <nav class="navbar navbar-expand-lg" aria-label="Navegação principal">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" aria-label="Página inicial">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre.html" aria-label="Sobre José Roberto">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="servicos.html" aria-label="Serviços oferecidos">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projetos.html" aria-label="Projetos realizados">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="voluntariado.html" aria-label="Ações voluntárias">Voluntariado</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="experiencias.html" aria-label="Experiências profissionais">Experiências</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contato.html" aria-label="Informações de contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <header id="home" class="text-center py-3">
+    <h1><span class="initial">J</span>osé <span class="initial">R</span>oberto</h1>
+    <p>Especialista em Segurança da Informação, Governança de TI, Gestão de Riscos e Conformidade Regulatória</p>
+  </header>
+
+  <!-- Seção Sobre -->
+  <section id="sobre" class="py-5">
+    <div class="container">
+      <h2>Sobre Mim</h2>
+      <p>Com mais de 17 anos de experiência em Segurança da Informação, atuo com frameworks como NIST, ISO 27001, LGPD, ITIL e COBIT. Possuo certificações como CEH, PDPF e Scrum Master. Trabalhei em empresas como Itaú, PagBank, HP e outras.</p>
+      <div class="btn-container">
+        <a href="sobre.html" class="btn btn-warning btn-link" aria-label="Ver sobre">Saiba mais...</a>
+        <a href="experiencias.html" class="btn btn-warning btn-link" aria-label="Ver experiências profissionais">Experiências</a>
+        <a href="voluntariado.html" class="btn btn-warning btn-link" aria-label="Ver ações voluntárias">Ações Voluntárias</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Serviços -->
+  <section id="servicos" class="py-5">
+    <div class="container">
+      <h2>Meus Serviços</h2>
+      <ul>
+        <li>Consultoria em Segurança da Informação</li>
+        <li>Governança de TI e Gestão de Riscos</li>
+        <li>Identificação e Análise de Riscos</li>
+        <li>Testes de Invasão e Simulações</li>
+        <li>Cultura de Segurança e Treinamentos</li>
+        <li>Plano de Continuidade de Negócios</li>
+        <li>Proteção de Dados e LGPD/GDPR</li>
+        <li>Auditoria e Conformidade</li>
+        <li>KPIs e Dashboards em Power BI</li>
+        <li>Avaliação de Fornecedores</li>
+        <li>Criação de Políticas e Procedimentos</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Seção Projetos -->
+  <section id="projeto" class="py-5">
+    <div class="container">
+      <h2>Projetos Fluy</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="repo-card">
+            <img src="imagens/PagBank.png" alt="Projeto PagBank - Auditoria ISO 22301" class="img-fluid mb-3" loading="lazy">
+            <h5>PagBank</h5>
+            <p>Auditoria em Plano de Continuidade de Negócios (BCN) para certificação da ISO 22301</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="repo-card">
+            <img src="imagens/Semantix.png" alt="Projeto Semantix - Certificação ISO 27001" class="img-fluid mb-3" loading="lazy">
+            <h5>Semantix</h5>
+            <p>Liderança na certificação ISO 27001</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="repo-card">
+            <img src="imagens/Semantix.png" alt="Projeto Semantix - Certificação ISO 27701" class="img-fluid mb-3" loading="lazy">
+            <h5>Semantix</h5>
+            <p>Certificação ISO 27701</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="repo-card">
+            <img src="imagens/Semantix.png" alt="Projeto Semantix - Recertificação PCI-DSS" class="img-fluid mb-3" loading="lazy">
+            <h5>Semantix</h5>
+            <p>Recertificação PCI-DSS</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="repo-card">
+            <img src="imagens/Semantix.png" alt="Projeto Semantix - GRC Estruturação" class="img-fluid mb-3" loading="lazy">
+            <h5>Semantix</h5>
+            <p>GRC - Estruturação e Monitoramento</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="repo-card">
+            <img src="imagens/Semantix.png" alt="Projeto Semantix - Gestão de Continuidade" class="img-fluid mb-3" loading="lazy">
+            <h5>Semantix</h5>
+            <p>Gestão de Continuidade de Negócios; Gestão de Riscos; Estruturação de Governança de TI</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="repo-card">
+            <img src="imagens/banco-pine.png" alt="Projeto Banco Pine - Governança de TI" class="img-fluid mb-3" loading="lazy">
+            <h5>Banco Pine</h5>
+            <p>Criação e Estruturação de Governança de TI</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="repo-card">
+            <img src="imagens/itau.jpg" alt="Projeto Itaú - Auditoria de Processos" class="img-fluid mb-3" loading="lazy">
+            <h5>Itaú</h5>
+            <p>Auditoria de Processos</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="repo-card">
+            <img src="imagens/itau.jpg" alt="Projeto Itaú - Modalidade de Uso de Computadores" class="img-fluid mb-3" loading="lazy">
+            <h5>Itaú</h5>
+            <p>Modalidade de uso de computadores</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="repo-card">
+            <img src="imagens/itau.jpg" alt="Projeto Itaú - Outsourcing TI" class="img-fluid mb-3" loading="lazy">
+            <h5>Itaú</h5>
+            <p>Outsourcing TI</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Competências (Gráfico) -->
+  <section id="competencias" class="chart-section">
+    <div class="container">
+      <h2>Minhas Competências</h2>
+      <div class="chart-container">
+        <canvas id="graficoPerfil"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Card de Contato -->
+  <div class="contact-card">
+    <h3>Entre em Contato</h3>
+    <p>
+      <a href="https://www.linkedin.com/in/jose-roberto-risk/" target="_blank" aria-label="Perfil LinkedIn de José Roberto"><img src="Imagens/Linkedin.png" alt="Ícone do LinkedIn" style="vertical-align: middle;"></a>
+      <a href="https://bit.ly/RobertoFluy" target="_blank" aria-label="WhatsApp de José Roberto"><img src="Imagens/Whatsapp.png" alt="Ícone do WhatsApp" style="vertical-align: middle;"></a>
+      <a href="https://github.com/JRobertoFluy" target="_blank" aria-label="GitHub de José Roberto"><img src="Imagens/GitHub.jpg" alt="Ícone do GitHub" style="vertical-align: middle;"></a>
+      <a href="mailto:jose.roberto.jesus@gmail.com" target="_blank" aria-label="Enviar e-mail para José Roberto"><img src="Imagens/email.png" alt="Ícone do E-mail" style="vertical-align: middle;"></a>
+    </p>
+    <p><a href="mailto:jose.roberto.jesus@gmail.com" aria-label="Enviar e-mail para José Roberto">jose.roberto.jesus@gmail.com</a></p>
+  </div>
+
+  <!-- Âncora para Navegação -->
+  <div id="contato"></div>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p>© 2025 José Roberto. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!-- Chart.js Script -->
+  <script>
+    const ctx = document.getElementById('graficoPerfil').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Segurança da Informação', 'Governança de TI', 'Gestão de Riscos', 'Conformidade', 'Processos'],
+        datasets: [{
+          label: 'Nível de Atuação',
+          data: [95, 90, 85, 80, 75],
+          backgroundColor: 'rgba(255, 215, 0, 0.7)',
+          borderColor: 'black',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        layout: {
+          padding: {
+            top: 20,
+            left: 10,
+            right: 10,
+            bottom: 10
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            title: { display: true, text: 'Nível (%)', color: '#ffffff', font: { size: 14, family: 'Roboto' } },
+            ticks: { color: '#ffffff', font: { size: 12, family: 'Roboto' } }
+          },
+          x: {
+            title: { display: true, text: 'Competências', color: '#ffffff', font: { size: 14, family: 'Roboto' } },
+            ticks: { color: '#ffffff', font: { size: 12, family: 'Roboto' } }
+          }
+        },
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                const years = [7, 15, 5, 11, 17];
+                return `${context.dataset.label}: ${context.raw}% (${years[context.dataIndex]} anos)`;
+              }
+            }
+          },
+          annotation: {
+            annotations: {
+              label1: {
+                type: 'label', xValue: 0, yValue: 95, content: ['7 anos'], color: '#ffffff',
+                backgroundColor: 'rgba(0, 0, 0, 0.7)', padding: 4, borderRadius: 3, position: 'center',
+                yAdjust: -30, font: { size: 10, family: 'Roboto' }
+              },
+              label2: {
+                type: 'label', xValue: 1, yValue: 90, content: ['15 anos'], color: '#ffffff',
+                backgroundColor: 'rgba(0, 0, 0, 0.7)', padding: 4, borderRadius: 3, position: 'center',
+                yAdjust: -30, font: { size: 10, family: 'Roboto' }
+              },
+              label3: {
+                type: 'label', xValue: 2, yValue: 85, content: ['5 anos'], color: '#ffffff',
+                backgroundColor: 'rgba(0, 0, 0, 0.7)', padding: 4, borderRadius: 3, position: 'center',
+                yAdjust: -30, font: { size: 10, family: 'Roboto' }
+              },
+              label4: {
+                type: 'label', xValue: 3, yValue: 80, content: ['11 anos'], color: '#ffffff',
+                backgroundColor: 'rgba(0, 0, 0, 0.7)', padding: 4, borderRadius: 3, position: 'center',
+                yAdjust: -30, font: { size: 10, family: 'Roboto' }
+              },
+              label5: {
+                type: 'label', xValue: 4, yValue: 75, content: ['17 anos'], color: '#ffffff',
+                backgroundColor: 'rgba(0, 0, 0, 0.7)', padding: 4, borderRadius: 3, position: 'center',
+                yAdjust: -30, font: { size: 10, family: 'Roboto' }
+              }
+            }
+          }
+        },
+        animation: { duration: 1000, easing: 'easeOutBounce' },
+        hover: { mode: 'nearest', intersect: true, animationDuration: 400 },
+        maintainAspectRatio: false
+      }
+    });
+  </script>
+</body>
+</html>

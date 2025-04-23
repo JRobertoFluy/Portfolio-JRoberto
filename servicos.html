@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça os serviços de José Roberto em Segurança da Informação, Governança de TI, Gestão de Riscos, Privacidade de Dados, Auditoria e Análise de Dados, com foco em conformidade, resiliência e inovação.">
+  <meta name="keywords" content="José Roberto, segurança da informação, governança de TI, gestão de riscos, privacidade de dados, auditoria, análise de dados, LGPD, GDPR, ISO 27001">
+  <title>Serviços | José Roberto | Fluy</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Montserrat:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* === Estilo Geral === */
+    body {
+      background-image: url('Imagens/Back_Habilits.jpeg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    /* === Barra de Navegação === */
+    nav {
+      background: rgba(0, 0, 0, 0.9);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      padding: 10px 0;
+    }
+
+    nav .nav-link {
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav .nav-link:hover {
+      color: #ffd700;
+    }
+
+    nav .nav-link::before {
+      content: '•';
+      color: transparent;
+      position: absolute;
+      left: -15px;
+      transition: color 0.3s ease;
+    }
+
+    nav .nav-link:hover::before {
+      color: #ffd700;
+    }
+
+    /* === Logo === */
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 50px;
+      z-index: 1100;
+    }
+
+    /* === Cabeçalho === */
+    header {
+      text-align: center;
+      padding: 100px 0 50px;
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    header h1 {
+      color: #1C2526;
+      font-size: 6rem;
+      font-family: 'Alegreya', serif;
+      font-weight: 700;
+      -webkit-text-stroke: 1px #8C7853;
+      text-shadow: 1px 1px 0 #8C7853, -1px -1px 0 #8C7853, 1px -1px 0 #8C7853, -1px 1px 0 #8C7853;
+    }
+
+    header h1 .initial {
+      font-size: 9rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* === Seção Serviços === */
+    #servicos {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 60px 0;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    #servicos h2 {
+      color: #ffd700;
+      text-shadow: 1px 1px #000000;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+
+    #servicos p {
+      font-size: 1.2rem;
+      text-align: justify;
+      font-family: 'Roboto', sans-serif;
+      max-width: 900px;
+      margin: 0 auto 30px;
+    }
+
+    .servico-img {
+      display: block;
+      max-width: 600px; /* Aumentado de 200px para 600px (300%) */
+      height: auto;
+      margin: 0 auto 20px;
+      border-radius: 8px;
+    }
+
+    .card-servico {
+      background: rgba(0, 0, 0, 0.95);
+      color: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+
+    .card-servico:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5);
+    }
+
+    .card-servico h3 {
+      color: #ffd700;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .card-servico p, .card-servico ul {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+    }
+
+    .card-servico ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card-servico ul li {
+      padding: 5px 0;
+    }
+
+    .card-servico ul li::before {
+      content: "•";
+      color: #ffd700;
+      margin-right: 10px;
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    /* === Card de Contato === */
+    .contact-card {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.95);
+      padding: 15px;
+      border-radius: 8px;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1100;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-card h3 {
+      color: #ffd700;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
+
+    .contact-card a {
+      color: #ffd700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-card a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .contact-card img {
+      width: 30%;
+      max-width: 30px;
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+
+    /* === Ferramentas e Frameworks === */
+    .ferramentas-frameworks {
+      background: rgba(0, 0, 0, 0.95);
+      padding: 40px 0;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    .ferramentas-frameworks h2 {
+      color: #ffd700;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .ferramentas-frameworks ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+      font-family: 'Roboto', sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .ferramentas-frameworks ul li {
+      padding: 5px 0;
+    }
+
+    .ferramentas-frameworks ul li::before {
+      content: "•";
+      color: #ffd700;
+      margin-right: 10px;
+    }
+
+    /* === Footer === */
+    footer {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 20px 0;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    footer:hover {
+      background: #2a2a2a;
+    }
+
+    /* === Responsividade === */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 4rem;
+      }
+
+      header h1 .initial {
+        font-size: 6rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      #servicos h2 {
+        font-size: 2rem;
+      }
+
+      #servicos p, .card-servico p, .card-servico ul {
+        font-size: 0.9rem;
+      }
+
+      .card-servico h3 {
+        font-size: 1.3rem;
+      }
+
+      .servico-img {
+        max-width: 450px; /* Aumentado de 150px para 450px (300%) */
+      }
+
+      .contact-card {
+        position: static;
+        margin: 20px auto;
+        max-width: 90%;
+        padding: 10px;
+      }
+
+      .contact-card h3 {
+        font-size: 1.2rem;
+      }
+
+      .contact-card p {
+        font-size: 0.8rem;
+      }
+
+      .ferramentas-frameworks h2 {
+        font-size: 1.8rem;
+      }
+
+      .ferramentas-frameworks ul {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo -->
+  <img src="Imagens/logo_JR.png" alt="Logotipo de José Roberto" class="logo" loading="lazy">
+
+  <!-- Barra de Navegação -->
+  <nav class="navbar navbar-expand-lg" aria-label="Navegação principal">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" aria-label="Página inicial">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre.html" aria-label="Sobre José Roberto">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="servicos.html" aria-label="Serviços oferecidos">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projetos.html" aria-label="Projetos realizados">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="voluntariado.html" aria-label="Ações voluntárias">Voluntariado</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="experiencias.html" aria-label="Experiências profissionais">Experiências</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contato.html" aria-label="Informações de contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <header id="servicos" class="text-center py-3">
+    <div class="container">
+      <h1><span class="initial">M</span>eus <span class="initial">S</span>erviços</h1>
+      <p>🎯 Ofereço soluções especializadas em Segurança da Informação, Governança de TI, Gestão de Riscos, Privacidade de Dados, Auditoria e Análise de Dados, com foco em conformidade, resiliência e inovação estratégica.</p>
+    </div>
+  </header>
+
+  <!-- Seção Serviços -->
+  <section id="servicos" class="py-5">
+    <div class="container">
+      <p>🌟 Transformo desafios em oportunidades com serviços personalizados, utilizando as melhores práticas e ferramentas do mercado. Conheça minhas competências e como posso ajudar sua organização a alcançar resultados de alto impacto.</p>
+
+      <!-- Consultoria em Segurança Cibernética -->
+      <div class="mb-5">
+        <img src="Imagens/Consultoria_Segurança_Cibernética.jpeg" alt="Imagem Consultoria em Segurança Cibernética" class="servico-img" loading="lazy">
+        <h2>Consultoria em Segurança Cibernética</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">🔍</span> GAP Analysis</h3>
+              <p>Avalio a maturidade da segurança da informação, identificando vulnerabilidades e lacunas em políticas e controles.</p>
+              <ul>
+                <li>Análise detalhada com ISO 27001, NIST, CIS Controls</li>
+                <li>Propostas de melhorias estratégicas</li>
+                <li>Relatórios para conformidade regulatória</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">🛠️</span> Planejamento e Treinamentos</h3>
+              <p>Desenvolvo planos estratégicos e capacito equipes com treinamentos personalizados para mitigar riscos cibernéticos.</p>
+              <ul>
+                <li>Controles eficientes para segurança</li>
+                <li>Simulações de ataques (ex.: phishing)</li>
+                <li>Fortalecimento da cultura de segurança</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">🛡️</span> SIEM/MFA e Simulações</h3>
+              <p>Implemento SIEM e MFA para monitoramento e controle de acessos, com simulações para testar resiliência.</p>
+              <ul>
+                <li>Monitoramento contínuo de ameaças</li>
+                <li>Autenticação multifator robusta</li>
+                <li>Testes de resposta a incidentes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gestão Estratégica de Riscos -->
+      <div class="mb-5">
+        <img src="Imagens/Riscos.jpeg" alt="Imagem Gestão Estratégica de Riscos" class="servico-img" loading="lazy">
+        <h2>Gestão Estratégica de Riscos</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">🕵️</span> Identificação de Riscos</h3>
+              <p>Analiso riscos cibernéticos e operacionais, identificando ameaças e impactos com metodologias reconhecidas.</p>
+              <ul>
+                <li>Análise com ISO 31000, NIST 800-30</li>
+                <li>Mapeamento de vulnerabilidades</li>
+                <li>Fortalecimento da resiliência</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">📋</span> Planos de Ação</h3>
+              <p>Desenvolvo planos estratégicos de mitigação baseados em ISO 31000 e NIST para conformidade e segurança.</p>
+              <ul>
+                <li>Redução de vulnerabilidades</li>
+                <li>Decisões embasadas em dados</li>
+                <li>Preparação para desafios futuros</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">📊</span> BCP/DRP e Relatórios</h3>
+              <p>Crio planos de continuidade (BCP/DRP) e relatórios executivos para respostas rápidas e decisões estratégicas.</p>
+              <ul>
+                <li>Testes de resiliência</li>
+                <li>Planos de recuperação de desastres</li>
+                <li>Insights para alta gestão</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Governança Corporativa de TI -->
+      <div class="mb-5">
+        <img src="Imagens/Governança_Corporativa_TI.jpeg" alt="Imagem Governança Corporativa de TI" class="servico-img" loading="lazy">
+        <h2>Governança Corporativa de TI</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">📈</span> Governança e Alinhamento</h3>
+              <p>Alinho a TI aos objetivos do negócio, implementando boas práticas de governança e conformidade.</p>
+              <ul>
+                <li>Otimização de processos</li>
+                <li>Gestão de riscos eficiente</li>
+                <li>Aumento da resiliência operacional</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">🗺️</span> Mapeamento de Processos</h3>
+              <p>Mapeio processos de TI e implemento KPIs para monitoramento contínuo e melhoria de desempenho.</p>
+              <ul>
+                <li>Identificação de oportunidades</li>
+                <li>Tomada de decisão ágil</li>
+                <li>Monitoramento com BPMN e Bizagi</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">🌐</span> Políticas e Transformação</h3>
+              <p>Desenvolvo políticas de TI e apoio a transformação digital para segurança e competitividade.</p>
+              <ul>
+                <li>Conformidade e eficiência</li>
+                <li>Soluções inovadoras</li>
+                <li>Crescimento estratégico</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Consultoria em Privacidade e Proteção de Dados -->
+      <div class="mb-5">
+        <img src="Imagens/Privacidade_ProteçãodeDados.jpeg" alt="Imagem Privacidade e Proteção de Dados" class="servico-img" loading="lazy">
+        <h2>Consultoria em Privacidade e Proteção de Dados</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">🔒</span> Diagnóstico LGPD/GDPR</h3>
+              <p>Realizo diagnósticos de conformidade com LGPD/GDPR, mapeando dados e criando RoPA.</p>
+              <ul>
+                <li>Avaliação de riscos</li>
+                <li>Transparência na gestão de dados</li>
+                <li>Conformidade regulatória</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">🎓</span> Planejar e Treinar</h3>
+              <p>Desenvolvo planos de privacidade e capacito equipes para boas práticas em proteção de dados.</p>
+              <ul>
+                <li>Treinamentos personalizados</li>
+                <li>Cultura de privacidade</li>
+                <li>Gestão de informações sensíveis</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">🛡️</span> Privacy by Design</h3>
+              <p>Implemento Privacy by Design e ISO 27701/PCI DSS para segurança desde a concepção.</p>
+              <ul>
+                <li>Conformidade integrada</li>
+                <li>Proteção de dados robusta</li>
+                <li>Governança de privacidade</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Auditoria e Conformidade Empresarial -->
+      <div class="mb-5">
+        <img src="Imagens/Auditoria_Conformidade_Empresarial.jpeg" alt="Imagem Auditoria e Conformidade Empresarial" class="servico-img" loading="lazy">
+        <h2>Auditoria e Conformidade Empresarial</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">📝</span> Revisão de Controles</h3>
+              <p>Analiso e aprimoro controles de segurança e governança para reduzir riscos.</p>
+              <ul>
+                <li>Identificação de falhas</li>
+                <li>Conformidade com boas práticas</li>
+                <li>Fortalecimento organizacional</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">✅</span> Conformidade ISO/SOX</h3>
+              <p>Avalio e implemento controles para ISO 27001 e SOX, com relatórios detalhados.</p>
+              <ul>
+                <li>Atendimento a requisitos</li>
+                <li>Relatórios de conformidade</li>
+                <li>Ações corretivas estratégicas</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">🔎</span> Auditoria Interna</h3>
+              <p>Conduzo auditorias internas para identificar vulnerabilidades e otimizar processos.</p>
+              <ul>
+                <li>Plano de melhorias</li>
+                <li>Redução de riscos</li>
+                <li>Eficiência operacional</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Análise de Dados para Tomada de Decisão -->
+      <div class="mb-5">
+        <img src="Imagens/Análise_Dados.jpeg" alt="Imagem Análise de Dados" class="servico-img" loading="lazy">
+        <h2>Análise de Dados para Tomada de Decisão</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">📊</span> KPIs e Análise</h3>
+              <p>Defino KPIs para monitorar segurança e governança, identificando tendências e riscos.</p>
+              <ul>
+                <li>Indicadores estratégicos</li>
+                <li>Análise de dados precisa</li>
+                <li>Tomada de decisão ágil</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">📈</span> Dashboards Power BI</h3>
+              <p>Crio dashboards interativos no Power BI para visualização de métricas em tempo real.</p>
+              <ul>
+                <li>Visão clara de dados</li>
+                <li>Otimização com BPMN</li>
+                <li>Controle operacional</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-servico">
+              <h3><span class="card-icon">📑</span> Relatórios Executivos</h3>
+              <p>Elaboro relatórios com análises de ameaças e recomendações para a alta gestão.</p>
+              <ul>
+                <li>Insights estratégicos</li>
+                <li>Análise de threats</li>
+                <li>Decisões informadas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ferramentas e Frameworks -->
+  <section class="ferramentas-frameworks py-5">
+    <div class="container">
+      <h2>Ferramentas e Frameworks</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h3><span class="card-icon">🔧</span> Ferramentas Utilizadas</h3>
+          <ul>
+            <li>Power BI, Excel Avançado: Indicadores e análise estratégica</li>
+            <li>TopDesk, Bizagi, Miro: Modelagem e automação de processos</li>
+            <li>SIEM, EDR, MFA, DLP: Segurança técnica e monitoramento</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h3><span class="card-icon">📚</span> Frameworks Aplicados</h3>
+          <ul>
+            <li>Segurança & Privacidade: ISO 27001, ISO 27701, NIST CSF, CIS Controls, LGPD, GDPR, PCI-DSS</li>
+            <li>Governança & Riscos: ISO 31000, ISO 27005, COBIT 5, ITIL</li>
+            <li>Continuidade: ISO 22301, BIA, BCP, DRP</li>
+            <li>Outros: Privacy by Design, RoPA, ISO 20000</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Card de Contato -->
+  <div class="contact-card">
+    <h3>Entre em Contato</h3>
+    <p>
+      <a href="https://www.linkedin.com/in/jose-roberto-risk/" target="_blank" aria-label="Perfil LinkedIn de José Roberto"><img src="Imagens/Linkedin.png" alt="Ícone do LinkedIn" style="vertical-align: middle;"></a>
+      <a href="https://bit.ly/RobertoFluy" target="_blank" aria-label="WhatsApp de José Roberto"><img src="Imagens/Whatsapp.png" alt="Ícone do WhatsApp" style="vertical-align: middle;"></a>
+      <a href="https://github.com/JRobertoFluy" target="_blank" aria-label="GitHub de José Roberto"><img src="Imagens/GitHub.jpg" alt="Ícone do GitHub" style="vertical-align: middle;"></a>
+      <a href="mailto:jose.roberto.jesus@gmail.com" target="_blank" aria-label="Enviar e-mail para José Roberto"><img src="Imagens/email.png" alt="Ícone do E-mail" style="vertical-align: middle;"></a>
+    </p>
+    <p><a href="mailto:jose.roberto.jesus@gmail.com" aria-label="Enviar e-mail para José Roberto">jose.roberto.jesus@gmail.com</a></p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p>© 2025 José Roberto. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

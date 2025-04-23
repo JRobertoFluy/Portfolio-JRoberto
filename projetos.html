@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça os projetos de José Roberto em auditoria, certificações ISO, governança de TI e gestão de riscos, realizados em organizações como PagBank, Semantix, Banco Pine e Itaú.">
+  <meta name="keywords" content="José Roberto, projetos, auditoria, ISO 27001, ISO 27701, PCI-DSS, governança de TI, gestão de riscos, PagBank, Semantix, Banco Pine, Itaú">
+  <title>Projetos | José Roberto | Fluy</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Montserrat:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* === Estilo Geral === */
+    body {
+      background-image: url('Imagens/Back_Habilits.jpeg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    /* === Barra de Navegação === */
+    nav {
+      background: rgba(0, 0, 0, 0.9);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      padding: 10px 0;
+    }
+
+    nav .nav-link {
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav .nav-link:hover {
+      color: #ffd700;
+    }
+
+    nav .nav-link::before {
+      content: '•';
+      color: transparent;
+      position: absolute;
+      left: -15px;
+      transition: color 0.3s ease;
+    }
+
+    nav .nav-link:hover::before {
+      color: #ffd700;
+    }
+
+    /* === Logo === */
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 50px;
+      z-index: 1100;
+    }
+
+    /* === Cabeçalho === */
+    header {
+      text-align: center;
+      padding: 100px 0 50px;
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    header h1 {
+      color: #1C2526;
+      font-size: 6rem;
+      font-family: 'Alegreya', serif;
+      font-weight: 700;
+      -webkit-text-stroke: 1px #8C7853;
+      text-shadow: 1px 1px 0 #8C7853, -1px -1px 0 #8C7853, 1px -1px 0 #8C7853, -1px 1px 0 #8C7853;
+    }
+
+    header h1 .initial {
+      font-size: 9rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* === Seção Projetos === */
+    #projetos {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 60px 0;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    #projetos h2 {
+      color: #ffd700;
+      text-shadow: 1px 1px #000000;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+
+    #projetos p {
+      font-size: 1.2rem;
+      text-align: justify;
+      font-family: 'Roboto', sans-serif;
+      max-width: 900px;
+      margin: 0 auto 30px;
+    }
+
+    .projeto-img {
+      display: block;
+      max-width: 600px;
+      height: auto;
+      margin: 0 auto 20px;
+      border-radius: 8px;
+    }
+
+    .card-projeto {
+      background: rgba(0, 0, 0, 0.95);
+      color: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+
+    .card-projeto:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5);
+    }
+
+    .card-projeto h3 {
+      color: #ffd700;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .card-projeto p, .card-projeto ul {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+    }
+
+    .card-projeto ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card-projeto ul li {
+      padding: 5px 0;
+    }
+
+    .card-projeto ul li::before {
+      content: "•";
+      color: #ffd700;
+      margin-right: 10px;
+    }
+
+    /* === Card de Contato === */
+    .contact-card {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.95);
+      padding: 15px;
+      border-radius: 8px;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1100;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-card h3 {
+      color: #ffd700;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
+
+    .contact-card a {
+      color: #ffd700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-card a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .contact-card img {
+      width: 30%;
+      max-width: 30px;
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+
+    /* === Footer === */
+    footer {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 20px 0;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    footer:hover {
+      background: #2a2a2a;
+    }
+
+    /* === Responsividade === */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 4rem;
+      }
+
+      header h1 .initial {
+        font-size: 6rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      #projetos h2 {
+        font-size: 2rem;
+      }
+
+      #projetos p, .card-projeto p, .card-projeto ul {
+        font-size: 0.9rem;
+      }
+
+      .card-projeto h3 {
+        font-size: 1.3rem;
+      }
+
+      .projeto-img {
+        max-width: 450px;
+      }
+
+      .contact-card {
+        position: static;
+        margin: 20px auto;
+        max-width: 90%;
+        padding: 10px;
+      }
+
+      .contact-card h3 {
+        font-size: 1.2rem;
+      }
+
+      .contact-card p {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo -->
+  <img src="Imagens/logo_JR.png" alt="Logotipo de José Roberto" class="logo" loading="lazy">
+
+  <!-- Barra de Navegação -->
+  <nav class="navbar navbar-expand-lg" aria-label="Navegação principal">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" aria-label="Página inicial">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre.html" aria-label="Sobre José Roberto">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="servicos.html" aria-label="Serviços oferecidos">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projetos.html" aria-label="Projetos realizados">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="voluntariado.html" aria-label="Ações voluntárias">Voluntariado</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="experiencias.html" aria-label="Experiências profissionais">Experiências</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contato.html" aria-label="Informações de contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <header id="projetos" class="text-center py-3">
+    <div class="container">
+      <h1><span class="initial">M</span>eus <span class="initial">P</span>rojetos</h1>
+      <p>🌟 Cada projeto é uma história de transformação, unindo tecnologia, segurança e governança para impulsionar organizações como PagBank, Semantix, Banco Pine e Itaú. Conheça como colaborei com diversas áreas para superar desafios e alcançar resultados estratégicos.</p>
+    </div>
+  </header>
+
+  <!-- Seção Projetos -->
+  <section id="projetos" class="py-5">
+    <div class="container">
+      <p>💡 Minha abordagem combina expertise técnica, visão estratégica e colaboração interdisciplinar. Abaixo, apresento os projetos que liderei, destacando os desafios, as soluções implementadas e o impacto gerado em cada organização.</p>
+
+      <!-- PagBank - Auditoria ISO 22301 -->
+      <div class="mb-5">
+        <img src="Imagens/PagBank.png" alt="Imagem Projeto PagBank" class="projeto-img" loading="lazy">
+        <h2>PagBank - Auditoria ISO 22301</h2>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card-projeto">
+              <h3>Resiliência para o Futuro</h3>
+              <p>No PagBank, o desafio era garantir que o Plano de Continuidade de Negócios (BCN) estivesse alinhado aos rigorosos padrões da ISO 22301, essencial para a certificação e a confiança dos clientes. Colaborei com as equipes de TI, gestão de riscos e compliance, conduzindo uma auditoria detalhada que mapeou processos críticos e identificou lacunas.</p>
+              <p>Implementamos melhorias nos fluxos de resposta a incidentes e testamos a resiliência com simulações realistas. O resultado foi um BCN robusto, que não apenas garantiu a certificação ISO 22301, mas também fortaleceu a capacidade do PagBank de operar sem interrupções, mesmo em cenários adversos.</p>
+              <ul>
+                <li>Frameworks: ISO 22301, BIA (Business Impact Analysis)</li>
+                <li>Áreas envolvidas: TI, Gestão de Riscos, Compliance</li>
+                <li>Resultados: Certificação ISO 22301, maior resiliência operacional</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Semantix - Projetos -->
+      <div class="mb-5">
+        <img src="Imagens/Semantix.png" alt="Imagem Projetos Semantix" class="projeto-img" loading="lazy">
+        <h2>Semantix - Transformação em Segurança e Governança</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-projeto">
+              <h3>Certificação ISO 27001</h3>
+              <p>A Semantix precisava elevar seus padrões de segurança da informação para competir globalmente. Liderei a jornada rumo à certificação ISO 27001, trabalhando com equipes de segurança, TI e alta gestão. Realizamos GAP Analysis, implementamos controles robustos e capacitamos colaboradores, resultando na certificação e em maior confiança dos parceiros.</p>
+              <ul>
+                <li>Frameworks: ISO 27001, NIST CSF</li>
+                <li>Áreas: Segurança da Informação, TI, Gestão</li>
+                <li>Resultados: Certificação ISO 27001, credibilidade reforçada</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-projeto">
+              <h3>Certificação ISO 27701</h3>
+              <p>Com a privacidade de dados em alta, a Semantix buscava a ISO 27701. Integramos o conceito de Privacy by Design, mapeamos fluxos de dados com RoPA e alinhamos processos à LGPD/GDPR. A colaboração com equipes jurídicas e de TI garantiu a certificação, posicionando a Semantix como referência em proteção de dados.</p>
+              <ul>
+                <li>Frameworks: ISO 27701, LGPD, GDPR</li>
+                <li>Áreas: Jurídico, TI, Privacidade</li>
+                <li>Resultados: Certificação ISO 27701, conformidade reforçada</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-projeto">
+              <h3>Recertificação PCI-DSS</h3>
+              <p>A recertificação PCI-DSS era crucial para a Semantix manter transações seguras. Conduzi auditorias detalhadas, revisando controles de acesso e segurança de rede. Trabalhei com equipes de infraestrutura e compliance, implementando melhorias que asseguraram a recertificação e a confiança dos clientes.</p>
+              <ul>
+                <li>Frameworks: PCI-DSS</li>
+                <li>Áreas: Infraestrutura, Compliance</li>
+                <li>Resultados: Recertificação PCI-DSS, segurança de pagamentos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <div class="card-projeto">
+              <h3>GRC - Estruturação e Monitoramento</h3>
+              <p>Para fortalecer a governança, risco e conformidade (GRC), liderei a estruturação de processos na Semantix. Utilizamos COBIT 5 e ISO 31000, mapeando riscos e implementando KPIs com Power BI. A colaboração com TI e gestão resultou em um modelo GRC integrado, com monitoramento contínuo e maior transparência.</p>
+              <ul>
+                <li>Frameworks: COBIT 5, ISO 31000</li>
+                <li>Ferramentas: Power BI, Bizagi</li>
+                <li>Resultados: GRC estruturado, decisões estratégicas</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-projeto">
+              <h3>Gestão de Continuidade e Governança</h3>
+              <p>A Semantix precisava de resiliência e governança robustas. Estruturei planos de continuidade (BCP/DRP), gerenciei riscos com ISO 27005 e alinhei a TI aos objetivos estratégicos. Trabalhei com TI, riscos e alta gestão, entregando relatórios executivos que guiaram decisões e fortaleceram a organização.</p>
+              <ul>
+                <li>Frameworks: ISO 22301, ISO 27005, COBIT 5</li>
+                <li>Áreas: TI, Gestão de Riscos, Governança</li>
+                <li>Resultados: Continuidade assegurada, governança otimizada</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Banco Pine - Governança de TI -->
+      <div class="mb-5">
+        <img src="Imagens/banco-pine.png" alt="Imagem Projeto Banco Pine" class="projeto-img" loading="lazy">
+        <h2>Banco Pine - Governança de TI</h2>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card-projeto">
+              <h3>Fundação para a Excelência</h3>
+              <p>O Banco Pine buscava uma governança de TI que alinhasse tecnologia aos objetivos de negócios. Liderei a criação de políticas e processos baseados em COBIT 5 e ITIL, colaborando com TI, auditoria e alta gestão. Implementamos KPIs e mapeamos fluxos com Bizagi, resultando em maior eficiência e conformidade.</p>
+              <ul>
+                <li>Frameworks: COBIT 5, ITIL</li>
+                <li>Ferramentas: Bizagi, Power BI</li>
+                <li>Resultados: Governança estruturada, processos otimizados</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Itaú - Projetos -->
+      <div class="mb-5">
+        <img src="Imagens/itau.jpg" alt="Imagem Projetos Itaú" class="projeto-img" loading="lazy">
+        <h2>Itaú - Otimização e Conformidade</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-projeto">
+              <h3>Auditoria de Processos</h3>
+              <p>O Itaú precisava garantir a eficiência de seus processos de TI. Conduzi auditorias detalhadas, identificando gargalos e propondo melhorias com base em ISO 20000. Trabalhei com equipes de operações e compliance, entregando relatórios que otimizaram fluxos e reduziram riscos.</p>
+              <ul>
+                <li>Frameworks: ISO 20000</li>
+                <li>Áreas: Operações, Compliance</li>
+                <li>Resultados: Processos otimizados, riscos reduzidos</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-projeto">
+              <h3>Modalidade de Uso de Computadores</h3>
+              <p>Para reforçar a segurança, o Itaú revisou o uso de computadores. Desenvolvi políticas de acesso e controles baseados em NIST CSF, colaborando com segurança da informação e RH. O projeto aumentou a conformidade e protegeu dados sensíveis.</p>
+              <ul>
+                <li>Frameworks: NIST CSF</li>
+                <li>Áreas: Segurança, RH</li>
+                <li>Resultados: Conformidade reforçada, dados protegidos</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-projeto">
+              <h3>Outsourcing TI</h3>
+              <p>O Itaú buscava otimizar o outsourcing de TI. Liderei a revisão de contratos e processos, alinhando-os às melhores práticas de governança. Colaborei com jurídico, TI e fornecedores, garantindo eficiência, conformidade e redução de custos operacionais.</p>
+              <ul>
+                <li>Frameworks: COBIT 5, ITIL</li>
+                <li>Áreas: Jurídico, TI, Fornecedores</li>
+                <li>Resultados: Outsourcing otimizado, custos reduzidos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Card de Contato -->
+  <div class="contact-card">
+    <h3>Entre em Contato</h3>
+    <p>
+      <a href="https://www.linkedin.com/in/jose-roberto-risk/" target="_blank" aria-label="Perfil LinkedIn de José Roberto"><img src="Imagens/Linkedin.png" alt="Ícone do LinkedIn" style="vertical-align: middle;"></a>
+      <a href="https://bit.ly/RobertoFluy" target="_blank" aria-label="WhatsApp de José Roberto"><img src="Imagens/Whatsapp.png" alt="Ícone do WhatsApp" style="vertical-align: middle;"></a>
+      <a href="https://github.com/JRobertoFluy" target="_blank" aria-label="GitHub de José Roberto"><img src="Imagens/GitHub.jpg" alt="Ícone do GitHub" style="vertical-align: middle;"></a>
+      <a href="mailto:jose.roberto.jesus@gmail.com" target="_blank" aria-label="Enviar e-mail para José Roberto"><img src="Imagens/email.png" alt="Ícone do E-mail" style="vertical-align: middle;"></a>
+    </p>
+    <p><a href="mailto:jose.roberto.jesus@gmail.com" aria-label="Enviar e-mail para José Roberto">jose.roberto.jesus@gmail.com</a></p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p>© 2025 José Roberto. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça José Roberto, especialista em Segurança da Informação, Governança de TI, Gestão de Riscos e Governança de Dados com mais de 17 anos de experiência.">
+  <meta name="keywords" content="José Roberto, segurança da informação, governança de TI, gestão de riscos, governança de dados, LGPD, ISO 27001, consultoria">
+  <title>Sobre | José Roberto | Fluy</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Montserrat:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* === Estilo Geral === */
+    body {
+      background-image: url('Imagens/Back_sobre_Sec.png'); /* Comprimir imagem para melhor desempenho */
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    /* === Barra de Navegação === */
+    nav {
+      background: rgba(0, 0, 0, 0.9);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      padding: 10px 0;
+    }
+
+    nav .nav-link {
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav .nav-link:hover {
+      color: #ffd700;
+    }
+
+    nav .nav-link::before {
+      content: '•';
+      color: transparent;
+      position: absolute;
+      left: -15px;
+      transition: color 0.3s ease;
+    }
+
+    nav .nav-link:hover::before {
+      color: #ffd700;
+    }
+
+    /* === Logo === */
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 50px;
+      z-index: 1100;
+    }
+
+    /* === Cabeçalho === */
+    header {
+      text-align: center;
+      padding: 100px 0 50px;
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    header .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 3px solid #ffd700;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    header .profile-img:hover {
+      transform: scale(1.05);
+    }
+
+    header h1 {
+      color: #1C2526;
+      font-size: 6rem;
+      font-family: 'Alegreya', serif;
+      font-weight: 700;
+      -webkit-text-stroke: 1px #8C7853;
+      text-shadow: 1px 1px 0 #8C7853, -1px -1px 0 #8C7853, 1px -1px 0 #8C7853, -1px 1px 0 #8C7853;
+    }
+
+    header h1 .initial {
+      font-size: 9rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* === Seção Perfil === */
+    #perfil {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 60px 0;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    #perfil h2 {
+      color: #ffd700;
+      text-shadow: 1px 1px #000000;
+      font-size: 2.5rem;
+      text-align: left;
+      margin-bottom: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+
+    #perfil p {
+      font-size: 1.2rem;
+      text-align: justify;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .sec-grc-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+    }
+
+    /* === Seção Visão, Missão, Valores e Certificações === */
+    #valores-certificacoes {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 60px 0;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    .card-valor, .card-certificacao {
+      background: rgba(0, 0, 0, 0.95);
+      color: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-valor:hover, .card-certificacao:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5);
+    }
+
+    .card-valor h5, .card-certificacao h5 {
+      color: #ffd700;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .card-valor p, .card-valor ul, .card-certificacao ul {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+    }
+
+    .card-valor ul, .card-certificacao ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .card-valor ul li, .card-certificacao ul li {
+      padding: 5px 0;
+    }
+
+    .card-valor ul li::before {
+      content: "•";
+      color: #ffd700;
+      margin-right: 10px;
+    }
+
+    .card-certificacao ul li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-certificacao ul li .cert-info {
+      flex: 1;
+    }
+
+    .card-certificacao ul li .emblem-placeholder {
+      width: 50px;
+      text-align: center;
+    }
+
+    .card-certificacao ul li .emblem-placeholder img {
+      max-width: 50px;
+      height: auto;
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    /* === Card de Contato === */
+    .contact-card {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.95);
+      padding: 15px;
+      border-radius: 8px;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1100;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-card h3 {
+      color: #ffd700;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
+
+    .contact-card a {
+      color: #ffd700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-card a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .contact-card img {
+      width: 30%;
+      max-width: 30px;
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+
+    /* === Footer === */
+    footer {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 20px 0;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    footer:hover {
+      background: #2a2a2a;
+    }
+
+    /* === Responsividade === */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 4rem;
+      }
+
+      header h1 .initial {
+        font-size: 6rem;
+      }
+
+      header .profile-img {
+        width: 150px;
+        height: 150px;
+      }
+
+      #perfil h2, #valores-certificacoes h2 {
+        font-size: 2rem;
+      }
+
+      #perfil p, .card-valor p, .card-valor ul, .card-certificacao ul {
+        font-size: 1rem;
+      }
+
+      .sec-grc-img {
+        margin-bottom: 20px;
+      }
+
+      .contact-card {
+        position: static;
+        margin: 20px auto;
+        max-width: 90%;
+        padding: 10px;
+      }
+
+      .contact-card h3 {
+        font-size: 1.2rem;
+      }
+
+      .contact-card p {
+        font-size: 0.8rem;
+      }
+
+      .card-valor, .card-certificacao {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo -->
+  <img src="Imagens/logo_JR.png" alt="Logotipo de José Roberto" class="logo" loading="lazy">
+
+  <!-- Barra de Navegação -->
+  <nav class="navbar navbar-expand-lg" aria-label="Navegação principal">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" aria-label="Página inicial">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre.html" aria-label="Sobre José Roberto">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="servicos.html" aria-label="Serviços oferecidos">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projetos.html" aria-label="Projetos realizados">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="voluntariado.html" aria-label="Ações voluntárias">Voluntariado</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="experiencias.html" aria-label="Experiências profissionais">Experiências</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contato.html" aria-label="Informações de contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <header id="sobre" class="text-center py-3">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-md-start text-center">
+          <h1><span class="initial">S</span>obre <span class="initial">M</span>im</h1>
+          <p>Conheça minha trajetória e compromisso com a excelência em Segurança da Informação e Governança de TI</p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="Imagens/jose-roberto.png" alt="Foto de José Roberto" class="profile-img" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Seção Perfil Profissional -->
+  <section id="perfil" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="Imagens/Sec_GRC.png" alt="Imagem GovSec" class="img-fluid sec-grc-img">
+        </div>
+        <div class="col-md-6">
+          <h2>Minha Trajetória</h2>
+          <p>Sou um especialista em Segurança da Informação, Governança de TI, Gestão de Riscos e Governança de Dados, com mais de 17 anos de experiência em empresas de grande porte, como Itaú Unibanco, Banco Pine, Semantix, PagBank e consultorias estratégicas. Atuo com visão estratégica, foco em resultados e uma forte base técnica, alinhando conformidade regulatória, resiliência cibernética e inovação.</p>
+          <p>Minha trajetória é marcada pela busca contínua por excelência e adaptação a ambientes complexos, sempre guiado por frameworks como ISO 27001, ISO 27701, ISO 22301, NIST, COBIT e DAMA-DMBOK. Sou formado em Sistemas de Informação, com pós-graduação em Segurança da Informação, e possuo certificações que reforçam minha credibilidade, como CEH, PDPF, ITIL, Scrum Master e COBIT.</p>
+          <p>Além das implementações técnicas e regulatórias, sou movido por desafios. Estruturei departamentos de Governança de TI do zero, implementei planos de continuidade (PCN/DRP), desenvolvi estratégias de FinOps em nuvem com foco em otimização de custos e liderei iniciativas de conscientização em segurança, criando uma cultura sólida e participativa em todos os níveis da organização.</p>
+          <p>Meus testes de perfil revelam um profissional "Projetista" (RecruTest) e de personalidade ISTJ (MBTI): detalhista, estratégico, analítico, direto e altamente comprometido com resultados concretos. Tenho um senso de responsabilidade elevado, foco em planejamento estruturado e estou sempre disposto a liderar com integridade, foco técnico e visão prática.</p>
+          <p>Meu compromisso é transformar a segurança da informação e a governança em ativos estratégicos para o negócio, garantindo não apenas conformidade, mas confiança e valor real para os stakeholders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Visão, Missão, Valores e Certificações -->
+  <section id="valores-certificacoes" class="py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Coluna Esquerda: Visão, Missão, Valores -->
+        <div class="col-md-6">
+          <h2 style="text-align: left;">.................................Valores...............................</h2>
+          <div class="card-valor">
+            <div class="card-icon">🌍</div>
+            <h5>Visão</h5>
+            <p>Ser reconhecido como uma referência em segurança da informação, governança de dados e TI no Brasil, liderando iniciativas que transformam tecnologia em valor estratégico para as organizações.</p>
+          </div>
+          <div class="card-valor">
+            <div class="card-icon">🎯</div>
+            <h5>Missão</h5>
+            <p>Desenvolver, implementar e sustentar soluções robustas em Segurança da Informação, Governança de TI e Dados, promovendo conformidade, resiliência, inovação e proteção aos ativos digitais com foco no negócio e nas pessoas.</p>
+          </div>
+          <div class="card-valor">
+            <div class="card-icon">💎</div>
+            <h5>Valores</h5>
+            <ul>
+              <li>Integridade: Atuar com ética, responsabilidade e transparência.</li>
+              <li>Excelência Técnica: Buscar conhecimento e soluções inovadoras.</li>
+              <li>Foco em Resultado: Gerar valor com ações práticas e mensuráveis.</li>
+              <li>Resiliência e Segurança: Priorizar ambientes seguros e resilientes.</li>
+              <li>Colaboração e Liderança: Compartilhar conhecimento e inspirar.</li>
+              <li>Inovação com Responsabilidade: Equilibrar avanço com governança.</li>
+              <li>Comprometimento: Entregar com consistência e senso de dono.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Coluna Direita: Certificações -->
+        <div class="col-md-6">
+          <h2 style="text-align: right;">............................Certificações.................................</h2>
+          <div class="card-certificacao">
+            <div class="card-icon">🌐</div>
+            <h5>Governança</h5>
+            <ul>
+              <li>
+                <div class="cert-info">
+                  <strong>COBIT</strong>: Framework para governança e gestão de TI, alinhando tecnologia com objetivos de negócio. Foco em processos, controles, KPIs, e conformidade.
+                </div>
+                <div class="emblem-placeholder">
+                  <!-- Adicione o emblema aqui, ex.: <img src="Imagens/certificacoes/cobit.png" alt="Emblema COBIT"> -->
+                </div>
+              </li>
+              <li>
+                <div class="cert-info">
+                  <strong>ITIL Foundation</strong>: Gestão de serviços de TI (ITSM). Introdução a processos de TI.
+                </div>
+                <div class="emblem-placeholder">
+                  <!-- Adicione o emblema aqui, ex.: <img src="Imagens/certificacoes/itil_foundation.png" alt="Emblema ITIL Foundation"> -->
+                </div>
+              </li>
+              <li>
+                <div class="cert-info">
+                  <strong>ITIL Intermediate [SOA]</strong>: Service Offerings and Agreements, focado em acordos de serviço e entrega.
+                </div>
+                <div class="emblem-placeholder">
+                  <!-- Adicione o emblema aqui, ex.: <img src="Imagens/certificacoes/itil_soa.png" alt="Emblema ITIL SOA"> -->
+                </div>
+              </li>
+              <li>
+                <div class="cert-info">
+                  <strong>ISO 20000</strong>: Gestão de qualidade de serviços de TI. Define requisitos para um Sistema de Gestão de Serviços (SMS), garantindo entrega eficiente e melhoria contínua.
+                </div>
+                <div class="emblem-placeholder">
+                  <!-- Adicione o emblema aqui, ex.: <img src="Imagens/certificacoes/iso20000.png" alt="Emblema ISO 20000"> -->
+                </div>
+              </li>
+              <li>
+                <div class="cert-info">
+                  <strong>ISO 9001 Lead Auditor</strong>: Auditoria de sistemas de gestão de qualidade. Capacita para avaliar conformidade com padrões de qualidade em processos organizacionais, incluindo TI.
+                </div>
+                <div class="emblem-placeholder">
+                  <!-- Adicione o emblema aqui, ex.: <img src="Imagens/certificacoes/iso9001.png" alt="Emblema ISO 9001"> -->
+                </div>
+              </li>
+              <li>
+                <div class="cert-info">
+                  <strong>Scrum Master</strong>: Gestão ágil de projetos usando Scrum. Facilita equipes, remove impedimentos e promove entregas iterativas, aplicável a projetos de TI e segurança.
+                </div>
+                <div class="emblem-placeholder">
+                  <!-- Adicione o emblema aqui, ex.: <img src="Imagens/certificacoes/scrum.png" alt="Emblema Scrum Master"> -->
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="card-certificacao">
+            <div class="card-icon">🛡️</div>
+            <h5>Segurança</h5>
+            <ul>
+              <li>
+                <div class="cert-info">
+                  <strong>ISO 27001</strong>: Sistema de Gestão de Segurança da Informação (SGSI). Define controles para proteger ativos, gerenciar riscos e garantir conformidade com segurança.
+                </div>
+                <div class="emblem-placeholder">
+                  <!-- Adicione o emblema aqui, ex.: <img src="Imagens/certificacoes/iso27001.png" alt="Emblema ISO 27001"> -->
+                </div>
+              </li>
+              <li>
+                <div class="cert-info">
+                  <strong>CEH (Certified Ethical Hacker)</strong>: Hacking ético. Capacita para identificar vulnerabilidades, realizar testes de penetração e fortalecer sistemas contra ataques cibernéticos.
+                </div>
+                <div class="emblem-placeholder">
+                  <!-- Adicione o emblema aqui, ex.: <img src="Imagens/certificacoes/ceh.png" alt="Emblema CEH"> -->
+                </div>
+              </li>
+              <li>
+                <div class="cert-info">
+                  <strong>Privacy & Data Protection Foundation</strong>: Proteção de dados e privacidade. Foco em conformidade com leis como LGPD/GDPR, gestão de dados pessoais e mitigação de riscos de privacidade.
+                </div>
+                <div class="emblem-placeholder">
+                  <!-- Adicione o emblema aqui, ex.: <img src="Imagens/certificacoes/pdpf.png" alt="Emblema PDPF"> -->
+                </div>
+              </li>
+              <li>
+                <div class="cert-info">
+                  <strong>Cybersecurity Awareness</strong>: Conscientização em cibersegurança. Promove cultura de segurança, ensinando práticas para prevenir incidentes, como phishing e uso seguro de sistemas.
+                </div>
+                <div class="emblem-placeholder">
+                  <!-- Adicione o emblema aqui, ex.: <img src="Imagens/certificacoes/cybersecurity.png" alt="Emblema Cybersecurity Awareness"> -->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Card de Contato -->
+  <div class="contact-card">
+    <h3>Entre em Contato</h3>
+    <p>
+      <a href="https://www.linkedin.com/in/jose-roberto-risk/" target="_blank" aria-label="Perfil LinkedIn de José Roberto"><img src="Imagens/Linkedin.png" alt="Ícone do LinkedIn" style="vertical-align: middle;"></a>
+      <a href="https://bit.ly/RobertoFluy" target="_blank" aria-label="WhatsApp de José Roberto"><img src="Imagens/Whatsapp.png" alt="Ícone do WhatsApp" style="vertical-align: middle;"></a>
+      <a href="https://github.com/JRobertoFluy" target="_blank" aria-label="GitHub de José Roberto"><img src="Imagens/GitHub.jpg" alt="Ícone do GitHub" style="vertical-align: middle;"></a>
+      <a href="mailto:jose.roberto.jesus@gmail.com" target="_blank" aria-label="Enviar e-mail para José Roberto"><img src="Imagens/email.png" alt="Ícone do E-mail" style="vertical-align: middle;"></a>
+    </p>
+    <p><a href="mailto:jose.roberto.jesus@gmail.com" aria-label="Enviar e-mail para José Roberto">jose.roberto.jesus@gmail.com</a></p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p>© 2025 José Roberto. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

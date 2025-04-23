@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça as ações sociais e voluntárias de José Roberto, focadas em educação, inclusão digital e transformação social, promovendo impacto positivo em comunidades.">
+  <meta name="keywords" content="José Roberto, voluntariado, ações sociais, inclusão digital, educação, transformação social, EDUCAFRO, EVP, Instituto Informática na Comunidade">
+  <title>Voluntariado | José Roberto | Fluy</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Montserrat:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* === Estilo Geral === */
+    body {
+      background-image: url('Imagens/background_Sec_voluntariado.jpeg'); /* Comprimir imagem para melhor desempenho */
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    /* === Barra de Navegação === */
+    nav {
+      background: rgba(0, 0, 0, 0.9);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      padding: 10px 0;
+    }
+
+    nav .nav-link {
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav .nav-link:hover {
+      color: #ffd700;
+    }
+
+    nav .nav-link::before {
+      content: '•';
+      color: transparent;
+      position: absolute;
+      left: -15px;
+      transition: color 0.3s ease;
+    }
+
+    nav .nav-link:hover::before {
+      color: #ffd700;
+    }
+
+    /* === Logo === */
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 50px;
+      z-index: 1100;
+    }
+
+    /* === Cabeçalho === */
+    header {
+      text-align: center;
+      padding: 100px 0 50px;
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    header h1 {
+      color: #1C2526;
+      font-size: 6rem;
+      font-family: 'Alegreya', serif;
+      font-weight: 700;
+      -webkit-text-stroke: 1px #8C7853;
+      text-shadow: 1px 1px 0 #8C7853, -1px -1px 0 #8C7853, 1px -1px 0 #8C7853, -1px 1px 0 #8C7853;
+    }
+
+    header h1 .initial {
+      font-size: 9rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* === Seção Voluntariado === */
+    #voluntariado {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 60px 0;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    #voluntariado h2 {
+      color: #ffd700;
+      text-shadow: 1px 1px #000000;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+
+    #voluntariado p {
+      font-size: 1.2rem;
+      text-align: justify;
+      font-family: 'Roboto', sans-serif;
+      max-width: 900px;
+      margin: 0 auto 30px;
+    }
+
+    .card-voluntario {
+      background: rgba(0, 0, 0, 0.95);
+      color: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-voluntario:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5);
+    }
+
+    .card-voluntario h3 {
+      color: #ffd700;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .card-voluntario p, .card-voluntario ul {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+    }
+
+    .card-voluntario ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card-voluntario ul li {
+      padding: 5px 0;
+    }
+
+    .card-voluntario ul li::before {
+      content: "•";
+      color: #ffd700;
+      margin-right: 10px;
+    }
+
+    .voluntario-img {
+      max-width: 90px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .voluntario-img-iic {
+      max-width: 180px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    /* === Card de Contato === */
+    .contact-card {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.95);
+      padding: 15px;
+      border-radius: 8px;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1100;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-card h3 {
+      color: #ffd700;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
+
+    .contact-card a {
+      color: #ffd700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-card a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .contact-card img {
+      width: 30%;
+      max-width: 30px;
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+
+    /* === Footer === */
+    footer {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 20px 0;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    footer:hover {
+      background: #2a2a2a;
+    }
+
+    /* === Responsividade === */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 4rem;
+      }
+
+      header h1 .initial {
+        font-size: 6rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      #voluntariado h2 {
+        font-size: 2rem;
+      }
+
+      #voluntariado p, .card-voluntario p, .card-voluntario ul {
+        font-size: 1rem;
+      }
+
+      .card-voluntario h3 {
+        font-size: 1.5rem;
+      }
+
+      .voluntario-img {
+        max-width: 75px;
+      }
+
+      .voluntario-img-iic {
+        max-width: 150px;
+      }
+
+      .contact-card {
+        position: static;
+        margin: 20px auto;
+        max-width: 90%;
+        padding: 10px;
+      }
+
+      .contact-card h3 {
+        font-size: 1.2rem;
+      }
+
+      .contact-card p {
+        font-size: 0.8rem;
+      }
+
+      .card-voluntario {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo -->
+  <img src="Imagens/logo_JR.png" alt="Logotipo de José Roberto" class="logo" loading="lazy">
+
+  <!-- Barra de Navegação -->
+  <nav class="navbar navbar-expand-lg" aria-label="Navegação principal">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" aria-label="Página inicial">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre.html" aria-label="Sobre José Roberto">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="servicos.html" aria-label="Serviços oferecidos">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projetos.html" aria-label="Projetos realizados">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="voluntariado.html" aria-label="Ações voluntárias">Voluntariado</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="experiencias.html" aria-label="Experiências profissionais">Experiências</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contato.html" aria-label="Informações de contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <header id="voluntariado" class="text-center py-3">
+    <div class="container">
+      <h1><span class="initial">A</span>ções <span class="initial">S</span>ociais e <span class="initial">V</span>oluntariado</h1>
+      <p>Conheça minhas iniciativas voluntárias dedicadas à educação, inclusão digital e transformação social, promovendo impacto positivo e ajuda mútua nas comunidades.</p>
+    </div>
+  </header>
+
+  <!-- Seção Voluntariado -->
+  <section id="voluntariado" class="py-5">
+    <div class="container">
+      <p>🤝 Este repositório é dedicado às experiências e projetos sociais voluntários conduzidos ou apoiados por José Roberto Jesus da Silva, ao longo de sua trajetória profissional e pessoal. Com foco em educação, inclusão digital, mobilidade social e incentivo à permanência escolar, essas ações refletem um compromisso contínuo com o desenvolvimento humano e a transformação social.</p>
+      
+      <!-- Instituto Informática na Comunidade -->
+      <div class="card-voluntario">
+        <h3><a class="nav-link" href="https://www1.folha.uol.com.br/folha/informatica/ult124u17704.shtml" aria-label="Instituto Informática na Comunidade (IIC)"><span class="card-icon">🧑‍🏫</span> Instituto Informática na Comunidade (IIC)</a></h3>
+        <p class="d-flex align-items-start">
+          <img src="Imagens/IIC.jpg" alt="Imagem Instituto Informática na Comunidade" class="voluntario-img-iic me-3">
+          <span>
+            <strong><span class="card-icon">📍</span>Cargo:</strong> Instrutor de Informática<br>
+            <strong><span class="card-icon">📅</span> Período:</strong> Fevereiro/2003 – Novembro/2003<br>
+            <strong>Local:</strong> Sede na FGV, São Paulo
+          </span>
+        </p>
+        <p>O IIC foi criado em 1999 por alunos da FGV com o objetivo de promover inclusão digital para comunidades carentes. Atuando como instrutor, ministrei aulas de informática básica para turmas com até 20 alunos por ciclo, totalizando mais de 3.000 pessoas impactadas.</p>
+        <ul>
+          <li>Parcerias com Microsoft, Natura, Unilever, Locaweb e outras organizações viabilizaram infraestrutura e softwares.</li>
+          <li>Carga horária dos cursos: 80 horas.</li>
+          <li>Objetivo futuro: capacitar alunos para funções administrativas e operacionais.</li>
+        </ul>
+      </div>
+
+      <!-- EVP – Estudar Vale a Pena -->
+      <div class="card-voluntario">
+        <h3><a class="nav-link" href="https://www.institutounibanco.org.br/relatorio-2016/voluntariado.html" aria-label="EVP – Estudar Vale a Pena (Itaú Unibanco)"><span class="card-icon">🎓</span> EVP – Estudar Vale a Pena (Itaú Unibanco)</a></h3>
+        <p class="d-flex align-items-start">
+          <img src="Imagens/evp_itau.jpg" alt="Imagem EVP Itaú Unibanco" class="voluntario-img me-3">
+          <span>
+            <strong><span class="card-icon">📍</span>Cargo:</strong> Agente e Líder Voluntário<br>
+            <strong><span class="card-icon">📅</span> Período:</strong> 2013, 2014, 2015, 2016
+          </span>
+        </p>
+        <p>O EVP é um programa de voluntariado do Itaú Unibanco que incentiva estudantes do ensino médio da rede pública a valorizar a educação, refletir sobre o futuro e construir projetos de vida.</p>
+        <p><strong>Ações realizadas:</strong></p>
+        <ul>
+          <li>Visitas a escolas públicas para conversas com alunos;</li>
+          <li>Dinâmicas para promover autoestima e motivação;</li>
+          <li>Construção coletiva de objetivos e metas educacionais;</li>
+          <li>Apoio na permanência e engajamento escolar.</li>
+        </ul>
+        <p><strong>Resultados observados:</strong></p>
+        <ul>
+          <li>Aumento na permanência escolar;</li>
+          <li>Melhoria da visão de futuro dos jovens;</li>
+          <li>Fortalecimento da autoestima e empoderamento pessoal.</li>
+        </ul>
+      </div>
+
+      <!-- EDUCAFRO – Pré-Vestibular Comunitário -->
+      <div class="card-voluntario">
+        <h3><a class="nav-link" href="https://educafro.org.br/site/" aria-label="EDUCAFRO"><span class="card-icon">📚</span> EDUCAFRO – Pré-Vestibular Comunitário</a></h3>
+        <p class="d-flex align-items-start">
+          <img src="Imagens/educafro.jpg" alt="Imagem EDUCAFRO" class="voluntario-img me-3">
+          <span>
+            <strong><span class="card-icon">📍</span>Cargo:</strong> Coordenador de Curso (Voluntário)<br>
+            <strong><span class="card-icon">📅</span> Período:</strong> 2002 a 2005
+          </span>
+        </p>
+        <p>A EDUCAFRO é um movimento de inclusão social com foco em negros e pobres, promovendo o acesso ao ensino superior público e privado com bolsas de estudo.</p>
+        <p><strong>Responsabilidades:</strong></p>
+        <ul>
+          <li>Organização e coordenação pedagógica de núcleo pré-vestibular;</li>
+          <li>Apoio à formação cidadã e acadêmica;</li>
+          <li>Desenvolvimento de liderança comunitária;</li>
+          <li>Mediação com professores voluntários e alunos;</li>
+          <li>Implementação de práticas de empoderamento social.</li>
+        </ul>
+        <p><strong>Objetivo:</strong> Contribuir com a transformação social por meio da educação e protagonismo das periferias brasileiras.</p>
+      </div>
+
+      <!-- Compromisso com o Impacto Social -->
+      <div class="card-voluntario">
+        <h3><span class="card-icon">🌟</span> Compromisso com o Impacto Social</h3>
+        <p>Estas experiências refletem o meu compromisso pessoal com:</p>
+        <ul>
+          <li><span class="card-icon">🌍</span> Inclusão social e digital</li>
+          <li><span class="card-icon">🧠</span> Educação como motor de transformação</li>
+          <li><span class="card-icon">💬</span> Desenvolvimento de lideranças comunitárias</li>
+          <li><span class="card-icon">🤲</span> Responsabilidade social e protagonismo coletivo</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Card de Contato -->
+  <div class="contact-card">
+    <h3>Entre em Contato</h3>
+    <p>
+      <a href="https://www.linkedin.com/in/jose-roberto-risk/" target="_blank" aria-label="Perfil LinkedIn de José Roberto"><img src="Imagens/Linkedin.png" alt="Ícone do LinkedIn" style="vertical-align: middle;"></a>
+      <a href="https://bit.ly/RobertoFluy" target="_blank" aria-label="WhatsApp de José Roberto"><img src="Imagens/Whatsapp.png" alt="Ícone do WhatsApp" style="vertical-align: middle;"></a>
+      <a href="https://github.com/JRobertoFluy" target="_blank" aria-label="GitHub de José Roberto"><img src="Imagens/GitHub.jpg" alt="Ícone do GitHub" style="vertical-align: middle;"></a>
+      <a href="mailto:jose.roberto.jesus@gmail.com" target="_blank" aria-label="Enviar e-mail para José Roberto"><img src="Imagens/email.png" alt="Ícone do E-mail" style="vertical-align: middle;"></a>
+    </p>
+    <p><a href="mailto:jose.roberto.jesus@gmail.com" aria-label="Enviar e-mail para José Roberto">jose.roberto.jesus@gmail.com</a></p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p>© 2025 José Roberto. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

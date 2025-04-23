@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça as experiências profissionais de José Roberto em Governança de TI, Segurança da Informação, Gestão de Riscos e Governança de Dados, com resultados em conformidade, resiliência e inovação.">
+  <meta name="keywords" content="José Roberto, governança de TI, segurança da informação, gestão de riscos, governança de dados, conformidade, tecnologia">
+  <title>Experiências | José Roberto | Fluy</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Montserrat:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* === Estilo Geral === */
+    body {
+      background-image: url('Imagens/Back_Fluyexperience.jpeg'); /* Comprimir imagem para melhor desempenho */
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    /* === Barra de Navegação === */
+    nav {
+      background: rgba(0, 0, 0, 0.9);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      padding: 10px 0;
+    }
+
+    nav .nav-link {
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav .nav-link:hover {
+      color: #ffd700;
+    }
+
+    nav .nav-link::before {
+      content: '•';
+      color: transparent;
+      position: absolute;
+      left: -15px;
+      transition: color 0.3s ease;
+    }
+
+    nav .nav-link:hover::before {
+      color: #ffd700;
+    }
+
+    /* === Logo === */
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 50px;
+      z-index: 1100;
+    }
+
+    /* === Cabeçalho === */
+    header {
+      text-align: center;
+      padding: 100px 0 50px;
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    header .header-container {
+      position: relative;
+      display: inline-block;
+      text-align: left;
+    }
+
+    header .header-logo {
+      height: 75px;
+      position: absolute;
+      left: -60px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    header h1 {
+      color: #1C2526;
+      font-size: 6rem;
+      font-family: 'Alegreya', serif;
+      font-weight: 700;
+      -webkit-text-stroke: 1px #8C7853;
+      text-shadow: 1px 1px 0 #8C7853, -1px -1px 0 #8C7853, 1px -1px 0 #8C7853, -1px 1px 0 #8C7853;
+      margin: 0;
+    }
+
+    header h1 .initial {
+      font-size: 9rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      max-width: 800px;
+      margin: 10px auto 0;
+    }
+
+    /* === Seção Experiências === */
+    #experiencias {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 60px 0;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    #experiencias h2 {
+      color: #ffd700;
+      text-shadow: 1px 1px #000000;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+
+    #experiencias p {
+      font-size: 1.2rem;
+      text-align: justify;
+      font-family: 'Roboto', sans-serif;
+      max-width: 900px;
+      margin: 0 auto 30px;
+    }
+
+    .card-experiencia {
+      background: rgba(0, 0, 0, 0.95);
+      color: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-experiencia:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5);
+    }
+
+    .card-experiencia h3 {
+      color: #ffd700;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .card-experiencia p, .card-experiencia ul {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+    }
+
+    .card-experiencia ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card-experiencia ul li {
+      padding: 5px 0;
+    }
+
+    .card-experiencia ul li::before {
+      content: "•";
+      color: #ffd700;
+      margin-right: 10px;
+    }
+
+    .experiencia-img {
+      max-width: 135px;
+      max-height: 75px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .experiencia-img-large {
+      max-width: 180px;
+      max-height: 100px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    /* === Card de Contato === */
+    .contact-card {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.95);
+      padding: 15px;
+      border-radius: 8px;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1100;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-card h3 {
+      color: #ffd700;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
+
+    .contact-card a {
+      color: #ffd700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-card a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .contact-card img {
+      width: 30%;
+      max-width: 30px;
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+
+    /* === Footer === */
+    footer {
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 20px 0;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    footer:hover {
+      background: #2a2a2a;
+    }
+
+    /* === Responsividade === */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 4rem;
+      }
+
+      header h1 .initial {
+        font-size: 6rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      header .header-logo {
+        height: 60px;
+        left: -50px;
+      }
+
+      #experiencias h2 {
+        font-size: 2rem;
+      }
+
+      #experiencias p, .card-experiencia p, .card-experiencia ul {
+        font-size: 1rem;
+      }
+
+      .card-experiencia h3 {
+        font-size: 1.5rem;
+      }
+
+      .experiencia-img {
+        max-width: 112.5px;
+        max-height: 60px;
+      }
+
+      .experiencia-img-large {
+        max-width: 120px;
+        max-height: 70px;
+      }
+
+      .contact-card {
+        position: static;
+        margin: 20px auto;
+        max-width: 90%;
+        padding: 10px;
+      }
+
+      .contact-card h3 {
+        font-size: 1.2rem;
+      }
+
+      .contact-card p {
+        font-size: 0.8rem;
+      }
+
+      .card-experiencia {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo -->
+  <img src="Imagens/logo_JR.png" alt="Logotipo de José Roberto" class="logo" loading="lazy">
+
+  <!-- Barra de Navegação -->
+  <nav class="navbar navbar-expand-lg" aria-label="Navegação principal">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" aria-label="Página inicial">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre.html" aria-label="Sobre José Roberto">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="servicos.html" aria-label="Serviços oferecidos">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projetos.html" aria-label="Projetos realizados">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="voluntariado.html" aria-label="Ações voluntárias">Voluntariado</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="experiencias.html" aria-label="Experiências profissionais">Experiências</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contato.html" aria-label="Informações de contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <header id="experiencias" class="text-center py-3">
+    <div class="container">
+      <div class="header-container">
+        <img src="Imagens/logo_JR.png" alt="Logotipo de José Roberto" class="header-logo" loading="lazy">
+        <h1><span class="initial">E</span>xperiências</h1>
+      </div>
+      <p>💡 Minha trajetória profissional reflete mais de 17 anos de dedicação à Governança de TI, Segurança da Informação, Gestão de Riscos e Governança de Dados, entregando soluções inovadoras e resultados mensuráveis em ambientes regulados e de alta complexidade.</p>
+    </div>
+  </header>
+
+  <!-- Seção Experiências -->
+  <section id="experiencias" class="py-5">
+    <div class="container">
+      <p>🌟 Com foco em resiliência, conformidade e inovação, transformei desafios em oportunidades, utilizando frameworks como ISO 27001, NIST CSF, COBIT e DAMA-DMBOK. Abaixo, destaco minhas principais contribuições em empresas de tecnologia e finanças.</p>
+      
+      <!-- Fluydez Tech -->
+      <div class="card-experiencia">
+        <h3><span class="card-icon">🛡️</span> Especialista em Governança de Segurança da Informação | Fluydez Tech</h3>
+        <p class="d-flex align-items-start">
+          <img src="Imagens/fluydez.png" alt="Imagem Fluydez Tech" class="experiencia-img-large me-3">
+          <span>
+            <strong>Período:</strong><span class="card-icon">📅</span> Mai/2024 – Fev/2025<br>
+            <strong>Empresa:</strong><span class="card-icon">🏢</span> Fluydez Tech<br>
+            <strong>Cargo:</strong><span class="card-icon">🛡️</span> Especialista em Governança de Segurança da Informação
+          </span>
+        </p>
+        <p>Como consultor PJ, liderei projetos de Segurança da Informação e Governança de TI, estruturando ambientes resilientes com base em ISO 27001, NIST CSF, COBIT e DAMA-DMBOK. Implementei controles robustos em nuvem (AWS, Azure, GCP) e promovi uma cultura data-driven.</p>
+        <ul>
+          <li><span class="card-icon">📈</span> Reduzi riscos críticos em 60% com matrizes de risco e relatórios em Power BI.</li>
+          <li><span class="card-icon">✅</span> Garanti 95% de conformidade na auditoria ISO 27701, integrando privacidade ao SGSI.</li>
+          <li><span class="card-icon">🌍</span> Aumentei a resiliência operacional em 30% com planos de continuidade (PCN/DRP).</li>
+          <li><span class="card-icon">💡</span> Reduzi cliques maliciosos em 40% com treinamentos de cibersegurança.</li>
+        </ul>
+      </div>
+
+      <!-- EM Consulting -->
+      <div class="card-experiencia">
+        <h3><span class="card-icon">📊</span> Especialista em Governança de Dados e IA Ética | EM Consulting</h3>
+        <p class="d-flex align-items-start">
+          <img src="Imagens/emconsulting.png" alt="Imagem EM Consulting" class="experiencia-img-large me-3">
+          <span>
+            <strong>Período:</strong><span class="card-icon">📅</span> Jun/2024 – Jan/2025<br>
+            <strong>Empresa:</strong><span class="card-icon">🏢</span> EM Consulting<br>
+            <strong>Cargo:</strong><span class="card-icon">🛡️</span> Especialista em Governança de Dados e IA Ética
+          </span>
+        </p>
+        <p>Como consultor independente, estruturei governança de dados e IA ética, alinhada à LGPD, GDPR, ISO 27701 e AI Act. Implementei papéis como Data Steward e catálogos de dados, promovendo transparência e conformidade.</p>
+        <ul>
+          <li><span class="card-icon">📈</span> Reduzi não conformidades em 70% com frameworks ISO 27001 e ISO 42001.</li>
+          <li><span class="card-icon">✅</span> Aumentei reaproveitamento de dados em 25% com governança DAMA-DMBOK.</li>
+          <li><span class="card-icon">🌍</span> Reduzi riscos operacionais em 60% com matrizes ISO 31000.</li>
+          <li><span class="card-icon">💡</span> Capacitei 300+ colaboradores em segurança e ética em IA.</li>
+        </ul>
+      </div>
+
+      <!-- PagBank -->
+      <div class="card-experiencia">
+        <h3><span class="card-icon">🔒</span> Analista de Segurança da Informação Sênior | PagBank</h3>
+        <p class="d-flex align-items-start">
+          <img src="Imagens/PagBank.png" alt="Imagem PagBank" class="experiencia-img-large me-3">
+          <span>
+            <strong>Período:</strong><span class="card-icon">📅</span> Out/2023 – Fev/2024<br>
+            <strong>Empresa:</strong><span class="card-icon">🏢</span> PagBank<br>
+            <strong>Cargo:</strong><span class="card-icon">🛡️</span> Analista de Segurança da Informação Sênior
+          </span>
+        </p>
+        <p>Atuei na gestão de riscos e continuidade de negócios, utilizando RSA Archer e frameworks como ISO 27001, ISO 22301 e Bacen 4.658. Estruturei planos de ação e dashboards para alta gestão, elevando a resiliência operacional.</p>
+        <ul>
+          <li><span class="card-icon">📈</span> Reduzi não conformidades em 65% em auditorias internas.</li>
+          <li><span class="card-icon">✅</span> Alcancei 95% de sucesso em testes de continuidade (PCN/DRP).</li>
+          <li><span class="card-icon">🌍</span> Reduzi tempo de resposta a incidentes em 35% com Zero Trust.</li>
+          <li><span class="card-icon">💡</span> Promovi cultura de riscos com treinamentos em GCN.</li>
+        </ul>
+      </div>
+
+      <!-- Semantix -->
+      <div class="card-experiencia">
+        <h3><span class="card-icon">☁️</span> Especialista em Segurança e Governança de Dados | Semantix</h3>
+        <p class="d-flex align-items-start">
+          <img src="Imagens/Semantix.png" alt="Imagem Semantix" class="experiencia-img-large me-3">
+          <span>
+            <strong>Período:</strong><span class="card-icon">📅</span> Jun/2021 – Set/2023<br>
+            <strong>Empresa:</strong><span class="card-icon">🏢</span> Semantix<br>
+            <strong>Cargo:</strong><span class="card-icon">🛡️</span> Especialista em Segurança da Informação e Governança de Dados
+          </span>
+        </p>
+        <p>Liderei projetos de segurança e governança de dados em ambientes multicloud, utilizando ISO 27001, ISO 27701 e DAMA-DMBOK. Reduzi não conformidades e otimizei custos em nuvem com FinOps.</p>
+        <ul>
+          <li><span class="card-icon">📈</span> Reduzi riscos regulatórios em 70% com certificações ISO 27001/27701.</li>
+          <li><span class="card-icon">✅</span> Estruturei governança de dados, reduzindo inconsistências em 50%.</li>
+          <li><span class="card-icon">🌍</span> Otimizei custos em nuvem em 15% com AWS, GCP e Azure.</li>
+          <li><span class="card-icon">💡</span> Reduzi incidentes de phishing em 40% com treinamentos.</li>
+        </ul>
+      </div>
+
+      <!-- Banco Pine -->
+      <div class="card-experiencia">
+        <h3><span class="card-icon">📋</span> Analista de Governança de TI Ágil | Banco Pine</h3>
+        <p class="d-flex align-items-start">
+          <img src="Imagens/banco-pine.png" alt="Imagem Banco Pine" class="experiencia-img-large me-3">
+          <span>
+            <strong>Período:</strong><span class="card-icon">📅</span> Jul/2018 – Jun/2021<br>
+            <strong>Empresa:</strong><span class="card-icon">🏢</span> Banco Pine<br>
+            <strong>Cargo:</strong><span class="card-icon">🧭</span> Analista de Governança de TI Ágil
+          </span>
+        </p>
+        <p>Estruturei o Departamento de Governança de TI, liderando equipes e implementando COBIT 5, ITIL e Scrum. Otimizei processos com Bizagi e Power BI, aumentando a maturidade organizacional.</p>
+        <ul>
+          <li><span class="card-icon">📈</span> Reduzi MTTR em 80% com gestão de incidentes via TOPDESK.</li>
+          <li><span class="card-icon">✅</span> Elevei maturidade de governança em 30% com KPIs.</li>
+          <li><span class="card-icon">🌍</span> Reduzi custos operacionais em 20% com automações.</li>
+          <li><span class="card-icon">💡</span> Implantei GMUD, garantindo mudanças seguras.</li>
+        </ul>
+      </div>
+
+      <!-- Banco Itaú Unibanco (2011-2018) -->
+      <div class="card-experiencia">
+        <h3><span class="card-icon">🏦</span> Analista de Governança e Gestão de Ativos | Banco Itaú Unibanco</h3>
+        <p class="d-flex align-items-start">
+          <img src="Imagens/itau.jpg" alt="Imagem Banco Itaú Unibanco" class="experiencia-img me-3">
+          <span>
+            <strong>Período:</strong><span class="card-icon">📅</span> Abr/2011 – Fev/2018<br>
+            <strong>Empresa:</strong><span class="card-icon">🏢</span> Banco Itaú Unibanco<br>
+            <strong>Cargo:</strong><span class="card-icon">🧭</span> Analista de Governança e Gestão de Ativos
+          </span>
+        </p>
+        <p>Gerenciei 60 mil ativos de TI e otimizei processos com COBIT, ITIL e Kaizen. Liderei projetos como Cockpit TI, reduzindo custos e aumentando conformidade.</p>
+        <ul>
+          <li><span class="card-icon">📈</span> Reduzi custos operacionais em 30% com Cockpit TI.</li>
+          <li><span class="card-icon">✅</span> Aumentei conformidade em 25% com auditorias.</li>
+          <li><span class="card-icon">🌍</span> Reduzi tempo de restauração de serviços em 40%.</li>
+          <li><span class="card-icon">💡</span> Treinei equipes em governança e gestão de ativos.</li>
+        </ul>
+      </div>
+
+      <!-- HP - Hewlett-Packard -->
+      <div class="card-experiencia">
+        <h3><span class="card-icon">📊</span> Analista de Planejamento Estratégico | HP - Hewlett-Packard</h3>
+        <p class="d-flex align-items-start">
+          <img src="Imagens/hp.jpg" alt="Imagem HP" class="experiencia-img me-3">
+          <span>
+            <strong>Período:</strong><span class="card-icon">📅</span> Jan/2008 – Abr/2010<br>
+            <strong>Empresa:</strong><span class="card-icon">🏢</span> HP - Hewlett-Packard<br>
+            <strong>Cargo:</strong><span class="card-icon">🧭</span> Analista de Planejamento Estratégico e Governança de Dados
+          </span>
+        </p>
+        <p>Otimizei relatórios comerciais com Yotta Report e Siebel, apoiando decisões estratégicas. Estruturei governança de dados com SharePoint, aumentando eficiência.</p>
+        <ul>
+          <li><span class="card-icon">📈</span> Reduzi tempo de entrega de relatórios em 40% com Excel.</li>
+          <li><span class="card-icon">✅</span> Aumentei assertividade de metas em 25% com KPIs.</li>
+          <li><span class="card-icon">🌍</span> Melhorei eficiência de processos em 35%.</li>
+          <li><span class="card-icon">💡</span> Garanti 100% de conformidade em auditorias comerciais.</li>
+        </ul>
+      </div>
+
+      <!-- Banco Itaú Unibanco (2006-2008) -->
+      <div class="card-experiencia">
+        <h3><span class="card-icon">💰</span> Analista de Controle de Performance | Banco Itaú Unibanco</h3>
+        <p class="d-flex align-items-start">
+          <img src="Imagens/itau.jpg" alt="Imagem Banco Itaú Unibanco" class="experiencia-img me-3">
+          <span>
+            <strong>Período:</strong><span class="card-icon">📅</span> Mai/2006 – Jan/2008<br>
+            <strong>Empresa:</strong><span class="card-icon">🏢</span> Banco Itaú Unibanco<br>
+            <strong>Cargo:</strong><span class="card-icon">🧭</span> Analista de Controle de Performance Pleno
+          </span>
+        </p>
+        <p>Gerenciei pagamentos e relatórios financeiros, otimizando processos com Excel avançado. Alinhei áreas internas, garantindo conformidade e eficiência.</p>
+        <ul>
+          <li><span class="card-icon">📈</span> Reduzi tempo de rotinas financeiras em 20%.</li>
+          <li><span class="card-icon">✅</span> Melhorei performance comercial em 15% com relatórios.</li>
+          <li><span class="card-icon">🌍</span> Garanti 100% de conformidade em pagamentos.</li>
+          <li><span class="card-icon">💡</span> Estruturei fluxos de contas, reduzindo retrabalho.</li>
+        </ul>
+      </div>
+
+      <!-- Credicard -->
+      <div class="card-experiencia">
+        <h3><span class="card-icon">🏧</span> Analista de Controle Financeiro | Credicard</h3>
+        <p class="d-flex align-items-start">
+          <img src="Imagens/credicard.jpg" alt="Imagem Credicard" class="experiencia-img-large me-3">
+          <span>
+            <strong>Período:</strong><span class="card-icon">📅</span> Nov/2003 – Apr/2006<br>
+            <strong>Empresa:</strong><span class="card-icon">🏢</span> Credicard<br>
+            <strong>Cargo:</strong><span class="card-icon">🧭</span> Analista de Controle Financeiro Pleno
+          </span>
+        </p>
+        <p>Controlei pagamentos e contas durante a transição Itaú/Citi, padronizando processos e garantindo estabilidade financeira com Excel e SAP.</p>
+        <ul>
+          <li><span class="card-icon">📈</span> Reduzi tempo de processamento financeiro em 25%.</li>
+          <li><span class="card-icon">✅</span> Garanti zero interrupções em pagamentos críticos.</li>
+          <li><span class="card-icon">🌍</span> Melhorei rastreabilidade de contas e relatórios.</li>
+          <li><span class="card-icon">💡</span> Apoiei integração de sistemas legados.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Card de Contato -->
+  <div class="contact-card">
+    <h3>Entre em Contato</h3>
+    <p>
+      <a href="https://www.linkedin.com/in/jose-roberto-risk/" target="_blank" aria-label="Perfil LinkedIn de José Roberto"><img src="Imagens/Linkedin.png" alt="Ícone do LinkedIn" style="vertical-align: middle;"></a>
+      <a href="https://bit.ly/RobertoFluy" target="_blank" aria-label="WhatsApp de José Roberto"><img src="Imagens/Whatsapp.png" alt="Ícone do WhatsApp" style="vertical-align: middle;"></a>
+      <a href="https://github.com/JRobertoFluy" target="_blank" aria-label="GitHub de José Roberto"><img src="Imagens/GitHub.jpg" alt="Ícone do GitHub" style="vertical-align: middle;"></a>
+      <a href="mailto:jose.roberto.jesus@gmail.com" target="_blank" aria-label="Enviar e-mail para José Roberto"><img src="Imagens/email.png" alt="Ícone do E-mail" style="vertical-align: middle;"></a>
+    </p>
+    <p><a href="mailto:jose.roberto.jesus@gmail.com" aria-label="Enviar e-mail para José Roberto">jose.roberto.jesus@gmail.com</a></p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p>© 2025 José Roberto. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
