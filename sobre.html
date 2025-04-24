@@ -138,6 +138,20 @@
       margin: 20px 0;
     }
 
+    .section-title-valores, .section-title-certificacoes {
+      color: #ffd700;
+      text-shadow: 1px 1px #000000;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      text-align: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 15px;
+    }
+
     .card-valor, .card-certificacao {
       background: rgba(0, 0, 0, 0.95);
       color: #ffffff;
@@ -192,6 +206,12 @@
 
     .card-certificacao ul li .cert-info {
       flex: 1;
+    }
+
+    .card-certificacao ul li .cert-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffd700;
     }
 
     .card-certificacao ul li .emblem-placeholder {
@@ -290,12 +310,16 @@
         height: 188px;
       }
 
-      #perfil h2, #valores-certificacoes h2 {
+      #perfil h2, .section-title-valores, .section-title-certificacoes {
         font-size: 2rem;
       }
 
       #perfil p, .card-valor p, .card-valor ul, .card-certificacao ul {
         font-size: 1rem;
+      }
+
+      .card-certificacao ul li .cert-name {
+        font-size: 1.2rem;
       }
 
       .sec-grc-img {
@@ -348,7 +372,7 @@
             <a class="nav-link" href="voluntariado.html" aria-label="Ações voluntárias">Voluntariado</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="experiencias.html" aria-label="Experiências profissionais">Experiências</a>
+            <a class="nav-link" href=" experiencias.html" aria-label="Experiências profissionais">Experiências</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contato.html" aria-label="Informações de contato">Contato</a>
@@ -367,7 +391,7 @@
           <p>Conheça minha trajetória e compromisso com a excelência em Segurança da Informação e Governança de TI</p>
         </div>
         <div class="col-md-6 text-center">
-          <img src="imagens/roberto.png" alt="Foto de José Roberto" class="profile-img" loading="lazy">
+          <img src="imagens/jose-roberto.png" alt="Foto de José Roberto" class="profile-img" loading="lazy">
         </div>
       </div>
     </div>
@@ -398,7 +422,7 @@
       <div class="row">
         <!-- Coluna Esquerda: Visão, Missão, Valores -->
         <div class="col-md-6">
-          <h2 style="text-align: left;">...Valores...</h2>
+          <h2 class="section-title-valores">Valores</h2>
           <div class="card-valor">
             <div class="card-icon">🌍</div>
             <h5>Visão</h5>
@@ -425,14 +449,14 @@
         </div>
         <!-- Coluna Direita: Certificações -->
         <div class="col-md-6">
-          <h2 style="text-align: right;">...Certificações...</h2>
+          <h2 class="section-title-certificacoes">Certificações</h2>
           <div class="card-certificacao">
             <div class="card-icon">🌐</div>
             <h5>Governança</h5>
             <ul>
               <li>
                 <div class="cert-info">
-                  <strong>COBIT</strong>: Framework para governança e gestão de TI, alinhando tecnologia com objetivos de negócio. Foco em processos, controles, KPIs, e conformidade.
+                  <strong><span class="cert-name">COBIT</span></strong>: Framework para governança e gestão de TI, alinhando tecnologia com objetivos de negócio. Foco em processos, controles, KPIs, e conformidade.
                 </div>
                 <div class="emblem-placeholder">
                   <!-- Adicione o emblema aqui, ex.: <img src="imagens/certificacoes/cobit.png" alt="Emblema COBIT"> -->
@@ -440,7 +464,7 @@
               </li>
               <li>
                 <div class="cert-info">
-                  <strong>ITIL Foundation</strong>: Gestão de serviços de TI (ITSM). Introdução a processos de TI.
+                  <strong><span class="cert-name">ITIL Foundation</span></strong>: Gestão de serviços de TI (ITSM). Introdução a processos de TI.
                 </div>
                 <div class="emblem-placeholder">
                   <!-- Adicione o emblema aqui, ex.: <img src="imagens/certificacoes/itil_foundation.png" alt="Emblema ITIL Foundation"> -->
@@ -448,7 +472,7 @@
               </li>
               <li>
                 <div class="cert-info">
-                  <strong>ITIL Intermediate [SOA]</strong>: Service Offerings and Agreements, focado em acordos de serviço e entrega.
+                  <strong><span class="cert-name">ITIL Intermediate [SOA]</span></strong>: Service Offerings and Agreements, focado em acordos de serviço e entrega.
                 </div>
                 <div class="emblem-placeholder">
                   <!-- Adicione o emblema aqui, ex.: <img src="imagens/certificacoes/itil_soa.png" alt="Emblema ITIL SOA"> -->
@@ -456,7 +480,7 @@
               </li>
               <li>
                 <div class="cert-info">
-                  <strong>ISO 20000</strong>: Gestão de qualidade de serviços de TI. Define requisitos para um Sistema de Gestão de Serviços (SMS), garantindo entrega eficiente e melhoria contínua.
+                  <strong><span class="cert-name">ISO 20000</span></strong>: Gestão de qualidade de serviços de TI. Define requisitos para um Sistema de Gestão de Serviços (SMS), garantindo entrega eficiente e melhoria contínua.
                 </div>
                 <div class="emblem-placeholder">
                   <!-- Adicione o emblema aqui, ex.: <img src="imagens/certificacoes/iso20000.png" alt="Emblema ISO 20000"> -->
@@ -464,7 +488,7 @@
               </li>
               <li>
                 <div class="cert-info">
-                  <strong>ISO 9001 Lead Auditor</strong>: Auditoria de sistemas de gestão de qualidade. Capacita para avaliar conformidade com padrões de qualidade em processos organizacionais, incluindo TI.
+                  <strong><span class="cert-name">ISO 9001 Lead Auditor</span></strong>: Auditoria de sistemas de gestão de qualidade. Capacita para avaliar conformidade com padrões de qualidade em processos organizacionais, incluindo TI.
                 </div>
                 <div class="emblem-placeholder">
                   <!-- Adicione o emblema aqui, ex.: <img src="imagens/certificacoes/iso9001.png" alt="Emblema ISO 9001"> -->
@@ -472,12 +496,21 @@
               </li>
               <li>
                 <div class="cert-info">
-                  <strong>Scrum Master</strong>: Gestão ágil de projetos usando Scrum. Facilita equipes, remove impedimentos e promove entregas iterativas, aplicável a projetos de TI e segurança.
+                  <strong><span class="cert-name">Scrum Master</span></strong>: Gestão ágil de projetos usando Scrum. Facilita equipes, remove impedimentos e promove entregas iterativas, aplicável a projetos de TI e segurança.
                 </div>
                 <div class="emblem-placeholder">
                   <!-- Adicione o emblema aqui, ex.: <img src="imagens/certificacoes/scrum.png" alt="Emblema Scrum Master"> -->
                 </div>
-              </li -_sidebar_> <strong>ISO 27001</strong>: Sistema de Gestão de Segurança da Informação (SGSI). Define controles para proteger ativos, gerenciar riscos e garantir conformidade com segurança.
+              </li>
+            </ul>
+          </div>
+          <div class="card-certificacao">
+            <div class="card-icon">🔒</div>
+            <h5>Segurança</h5>
+            <ul>
+              <li>
+                <div class="cert-info">
+                  <strong><span class="cert-name">ISO 27001</span></strong>: Sistema de Gestão de Segurança da Informação (SGSI). Define controles para proteger ativos, gerenciar riscos e garantir conformidade com segurança.
                 </div>
                 <div class="emblem-placeholder">
                   <!-- Adicione o emblema aqui, ex.: <img src="imagens/certificacoes/iso27001.png" alt="Emblema ISO 27001"> -->
@@ -485,7 +518,7 @@
               </li>
               <li>
                 <div class="cert-info">
-                  <strong>CEH (Certified Ethical Hacker)</strong>: Hacking ético. Capacita para identificar vulnerabilidades, realizar testes de penetração e fortalecer sistemas contra ataques cibernéticos.
+                  <strong><span class="cert-name">CEH (Certified Ethical Hacker)</span></strong>: Hacking ético. Capacita para identificar vulnerabilidades, realizar testes de penetração e fortalecer sistemas contra ataques cibernéticos.
                 </div>
                 <div class="emblem-placeholder">
                   <!-- Adicione o emblema aqui, ex.: <img src="imagens/certificacoes/ceh.png" alt="Emblema CEH"> -->
@@ -493,7 +526,7 @@
               </li>
               <li>
                 <div class="cert-info">
-                  <strong>Privacy & Data Protection Foundation</strong>: Proteção de dados e privacidade. Foco em conformidade com leis como LGPD/GDPR, gestão de dados pessoais e mitigação de riscos de privacidade.
+                  <strong><span class="cert-name">Privacy & Data Protection Foundation</span></strong>: Proteção de dados e privacidade. Foco em conformidade com leis como LGPD/GDPR, gestão de dados pessoais e mitigação de riscos de privacidade.
                 </div>
                 <div class="emblem-placeholder">
                   <!-- Adicione o emblema aqui, ex.: <img src="imagens/certificacoes/pdpf.png" alt="Emblema PDPF"> -->
@@ -501,7 +534,7 @@
               </li>
               <li>
                 <div class="cert-info">
-                  <strong>Cybersecurity Awareness</strong>: Conscientização em cibersegurança. Promove cultura de segurança, ensinando práticas para prevenir incidentes, como phishing e uso seguro de sistemas.
+                  <strong><span class="cert-name">Cybersecurity Awareness</span></strong>: Conscientização em cibersegurança. Promove cultura de segurança, ensinando práticas para prevenir incidentes, como phishing e uso seguro de sistemas.
                 </div>
                 <div class="emblem-placeholder">
                   <!-- Adicione o emblema aqui, ex.: <img src="imagens/certificacoes/cybersecurity.png" alt="Emblema Cybersecurity Awareness"> -->
