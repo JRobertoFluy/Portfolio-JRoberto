@@ -378,7 +378,7 @@
             <a class="nav-link" href="voluntariado.html" aria-label="Ações voluntárias">Voluntariado</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="experiencias.html" aria-label="Experiências profissionais">Experiências</a>
+            <a class="nav-link" href=" experiencias.html" aria-label="Experiências profissionais">Experiências</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contato.html" aria-label="Informações de contato">Contato</a>
@@ -484,8 +484,10 @@
         <div class="col-md-4">
           <div class="repo-card">
             <img src="imagens/itau.jpg" alt="Projeto Itaú - Auditoria de Processos" class="img-fluid mb-3" loading="lazy">
+           /devices/idevice/idevice.py: No such file or directory
+make: *** [Makefile:29: run] Error 1
             <h5>Itaú</h5>
-            <    <p>Auditoria de Processos</p>
+            <p>Auditoria de Processos</p>
           </div>
         </div>
         <div class="col-md-4">
@@ -509,7 +511,6 @@
   <!-- Seção Competências (Gráfico) -->
   <section id="competencias" class="chart-section">
     <div class="container">
-      <h2>Minhas Competências</h2>
       <div class="chart-container">
         <canvas id="graficoPerfil"></canvas>
       </div>
@@ -520,7 +521,7 @@
   <div class="contact-card">
     <h3>Entre em Contato</h3>
     <p>
-      <a href="https://www.linkedin.com/in/jose-roberto-risk/" target="_blank" aria-label="Perfil LinkedIn de José Roberto"><img src="imagens/Linkedin.png" alt="Ícone do LinkedIn" style="vertical-align: middle;"></a>
+      <a href="https://www.linkedin.com/in/jose-roberto-risk/" target="_blank" aria-label="Perfil LinkedIn de José Roberto"><img src="imagens/linkedin.png" alt="Ícone do LinkedIn" style="vertical-align: middle;"></a>
       <a href="https://bit.ly/RobertoFluy" target="_blank" aria-label="WhatsApp de José Roberto"><img src="imagens/whatsapp.png" alt="Ícone do WhatsApp" style="vertical-align: middle;"></a>
       <a href="https://github.com/JRobertoFluy" target="_blank" aria-label="GitHub de José Roberto"><img src="imagens/GitHub.jpg" alt="Ícone do GitHub" style="vertical-align: middle;"></a>
       <a href="mailto:robertofluypro@gmail.com" target="_blank" aria-label="Enviar e-mail para José Roberto"><img src="imagens/email.png" alt="Ícone do E-mail" style="vertical-align: middle;"></a>
@@ -552,7 +553,8 @@
           borderWidth: 2,
           hoverBackgroundColor: 'rgba(255, 215, 0, 1)', // Cor mais clara ao passar o mouse
           hoverBorderColor: 'rgba(255, 215, 0, 0.8)', // Efeito de "glow" com borda
-          hoverBorderWidth: 4 // Aumenta a borda para simular crescimento
+          hoverBorderWidth: 4, // Aumenta a borda para simular crescimento
+          barPercentage: 0.6 // Reduz a largura das barras
         }]
       },
       options: {
@@ -590,27 +592,27 @@
               label1: {
                 type: 'label', xValue: 0, yValue: 95, content: ['7 anos'], color: '#ffffff',
                 backgroundColor: 'rgba(0, 0, 0, 0.7)', padding: 4, borderRadius: 3, position: 'center',
-                yAdjust: -30, font: { size: 10, family: 'Roboto' }
+                yAdjust: 0, font: { size: 10, family: 'Roboto' }
               },
               label2: {
                 type: 'label', xValue: 1, yValue: 90, content: ['15 anos'], color: '#ffffff',
                 backgroundColor: 'rgba(0, 0, 0, 0.7)', padding: 4, borderRadius: 3, position: 'center',
-                yAdjust: -30, font: { size: 10, family: 'Roboto' }
+                yAdjust: 0, font: { size: 10, family: 'Roboto' }
               },
               label3: {
                 type: 'label', xValue: 2, yValue: 85, content: ['5 anos'], color: '#ffffff',
                 backgroundColor: 'rgba(0, 0, 0, 0.7)', padding: 4, borderRadius: 3, position: 'center',
-                yAdjust: -30, font: { size: 10, family: 'Roboto' }
+                yAdjust: 0, font: { size: 10, family: 'Roboto' }
               },
               label4: {
                 type: 'label', xValue: 3, yValue: 80, content: ['11 anos'], color: '#ffffff',
                 backgroundColor: 'rgba(0, 0, 0, 0.7)', padding: 4, borderRadius: 3, position: 'center',
-                yAdjust: -30, font: { size: 10, family: 'Roboto' }
+                yAdjust: 0, font: { size: 10, family: 'Roboto' }
               },
               label5: {
                 type: 'label', xValue: 4, yValue: 75, content: ['17 anos'], color: '#ffffff',
                 backgroundColor: 'rgba(0, 0, 0, 0.7)', padding: 4, borderRadius: 3, position: 'center',
-                yAdjust: -30, font: { size: 10, family: 'Roboto' }
+                yAdjust: 0, font: { size: 10, family: 'Roboto' }
               }
             }
           }
